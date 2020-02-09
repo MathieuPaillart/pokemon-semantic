@@ -1,0 +1,136 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@base <http://www.polytech.fr/pokemon#> .
+
+
+##Essayer de réfléchir : à property chains///inverse functionnals///reflexive///asymmetric.
+
+##enumerated classes (types)///
+######################   CLASS   ############################
+
+<Region>
+  a owl:Class.
+<Animal>
+  a owl:Class ;
+  rdfs:label "animal"@en, "animal"@fr ;
+  rdfs:comment "a living organism characterized by voluntary movement."@en, "être vivant doué de sensibilite de mobilité."@fr .
+
+<Monster> 
+  a owl:Class;
+  rdfs:subClassOf <Animal>;
+  rdfs:label "monsters"@en, "monstres"@fr ;
+  rdfs:comment "A monster is often a type of grotesque creature, whose appearance frightens and whose powers of destruction threaten the human world's social or moral order."@en, "est un individu ou une créature dont l'apparence, voire le comportement, surprend par son écart avec les normes d'une société."@fr .
+<Pokemon>
+  a owl:Class;
+  rdfs:subClassOf <Monster>.
+
+<Male>
+  a owl:Class ;
+  rdfs:subClassOf <Animal>;
+  owl:disjointWith <Female> ;
+  rdfs:label "male"@en, "mâle"@fr.
+<Female>
+  a owl:Class;
+  rdfs:subClassOf <Animal>;
+  rdfs:label "female"@en, "femelle"@fr.
+
+<Person> 
+  a owl:Class;
+  rdfs:subClassOf <Animal>.
+
+
+<Trainer> 
+  a owl:Class;
+## Une personne est un trainer ssi elle possède un pokemon
+  rdfs:subClassOf <Person>.
+
+<Type>
+  a owl:Class.
+
+######################   ObjectProperty   ############################
+<hasEvolution>
+  a owl:ObjectProperty, owl:TransitiveProperty, owl:IrreflexiveProperty ;
+  rdfs:domain <Pokemon> ;
+  rdfs:range <Pokemon>.
+
+<hasNextEvolution>
+  a owl:ObjectProperty ;
+  rdfs:subPropertyOf <hasEvolution>;
+  rdfs:label "has for next evolution"@en, "a pour prochaine evolution"@fr .
+
+<hasPreviousEvolution>
+  a owl:ObjectProperty;
+  owl:inverseOf <hasNextEvolution>.
+
+<hasPokemon>
+  a owl:ObjectProperty;
+  rdfs:domain <Trainer>;
+  rdfs:range <Pokemon>;
+  rdfs:label "has pokemon"@en, "a comme pokemon"@fr.
+
+<hasTrainer> 
+  owl:inverseOf <hasPokemon>;
+  rdfs:domain <Pokemon> ;
+  rdfs:range <Trainer>.
+
+<hasType>
+  a owl:ObjectProperty;
+  ##Cardinalité entre 1 et 3 types
+  rdfs:domain <Pokemon>;
+  rdfs:range rdfs:Literal.
+
+<hasWeaknesses>
+  a owl:ObjectProperty;
+  ##Cardinalité entre 1 et 3 weaknesses
+  rdfs:domain <Pokemon>;
+  rdfs:range rdfs:Literal.
+  
+<hasEnemy> 
+  a owl:SymmetricProperty;
+  rdfs:domain <Animal>;
+  rdfs:range <Animal>.
+
+######################   DatatypeProperty   ############################
+
+<isCaptured>
+  owl:propertyDisjointWith <isWild>;
+  rdfs:domain <Pokemon>;
+  rdfs:range rdfs:Literal.
+
+<isWild>
+  a owl:DatatypeProperty;
+  rdfs:domain <Pokemon>;
+  rdfs:range rdfs:Literal.
+
+<size>
+  a owl:DatatypeProperty;
+  rdfs:domain <Animal>;
+  rdfs:range rdfs:Literal;
+  rdfs:label "size"@en, "taille"@fr ;
+  rdfs:comment "size of the animal"@en, "taille de l'aniaml"@fr .
+<weight>
+  a owl:DatatypeProperty;
+  rdfs:domain <Animal>;
+  rdfs:range rdfs:Literal;
+  rdfs:label "weight"@en, "poids"@fr ;
+  rdfs:comment "wieght of the animal"@en, "poids de l'animal"@fr .
+<hasPokedexNumber>
+  a owl:DatatypeProperty;
+  rdfs:domain <Pokemon>;
+  rdfs:range rdfs:Literal.
+
+<hasGender>
+ a owl:DatatypeProperty;
+  rdfs:domain <Animal>;
+  rdfs:label "name"@en, "nom"@fr ;
+  rdfs:comment "nickname of a team"@en, "pseudo de l'équipe"@fr .
+<name>
+  a owl:FunctionalProperty;
+  rdfs:range rdfs:Literal.
+<age>   
+  a owl:DatatypeProperty;
+  rdfs:domain <Person>;
+  rdfs:range rdfs:Literal;
+  rdfs:label "age"@en, "âge"@fr ;
+  rdfs:comment "complete existence duration."@en, "durée complète d'existence."@fr .
