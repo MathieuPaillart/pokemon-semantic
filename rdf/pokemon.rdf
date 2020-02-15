@@ -1,0 +1,185 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@base <http://www.polytech.fr/pokemon#> .
+
+ 
+<Psychic> a <Type>;
+<name> "Psychic"^^xsd:string;
+<hasWeaknesses> <Bug>;
+<hasWeaknesses> <Dragon>.
+
+<Dragon> a <Type>;
+<name> "Dragon"^^xsd:string;
+<hasWeaknesses> <Dragon>.
+
+<Fire> a <Type>;
+<name> "Fire"^^xsd:string;
+<hasWeaknesses> <Water>;
+<hasWeaknesses> <Ground>;
+<hasWeaknesses> <Rock>.
+
+<Water> a <Type>;
+<name> "Water"^^xsd:string;
+<hasWeaknesses> <Grass>;
+<hasWeaknesses> <Electric>.
+
+<Flying> a <Type>;
+<name> "Flying"^^xsd:string;
+<hasWeaknesses> <Rock>;
+<hasWeaknesses> <Electric>.
+
+<Grass> a <Type>;
+<name> "Grass"^^xsd:string;
+<hasWeaknesses> <Flying>;
+<hasWeaknesses> <Poison>;
+<hasWeaknesses> <Fire>;
+<hasWeaknesses> <Bug>.
+
+<Fight> a <Type>;
+<name> "Fight"^^xsd:string;
+<hasWeaknesses> <Flying>;
+<hasWeaknesses> <Psychic>.
+
+<Poison> a <Type>;
+<name> "Poison"^^xsd:string;
+<hasWeaknesses> <Ground>;
+<hasWeaknesses> <Psychic>.
+
+<Normal> a <Type>;
+<name> "Normal"^^xsd:string;
+<hasWeaknesses> <Fight>.
+
+<Bug> a <Type>;
+<name> "Bug"^^xsd:string;
+<hasWeaknesses> <Flying>;
+<hasWeaknesses> <Rock>;
+<hasWeaknesses> <Fire>.
+
+<Ground> a <Type>;
+<name> "Ground"^^xsd:string;
+<hasWeaknesses> <Water>;
+<hasWeaknesses> <Grass>.
+
+<Rock> a <Type>;
+<name> "Rock"^^xsd:string;
+<hasWeaknesses> <Water>.
+
+<Electric> a <Type>;
+<name> "Electric"^^xsd:string;
+<hasWeaknesses> <Ground>.
+
+<Mathieu> a <Trainer>;
+<hasGender> <Male>;
+<age> "22"^^xsd:integer;
+<hasPokemon> <Salamèche>.
+
+<Florian> a <Trainer>;
+<hasGender> <Male>;
+<age> "23"^^xsd:integer.
+
+<Sacha> a <Trainer>;
+<hasGender> <Male>;
+<age> "21"^^xsd:integer;
+<hasPokemon> <Miaoous>.
+
+
+<Ondine> a <Trainer>;
+<hasGender> <Female>;
+<age> "25"^^xsd:integer.
+
+
+<Jenny> a <Trainer>;
+<hasGender> <Female>;
+<age> "32"^^xsd:integer.
+
+
+<Pikachu> a <Pokemon>;
+<hasGender> <Female>;
+<hasNextEvolution> <Raichu>;
+<hasType> <Electric>;
+<isCaptured> "true"^^xsd:boolean;
+<hasTrainer> <Florian>;
+<hasEnemy> <Miaoous>.
+
+<Raichu> a <Pokemon>;
+<hasGender> <Female>;
+<isWild> "false"^^xsd:boolean;
+<hasType> <Electric>.
+
+<Carapuce> a <Pokemon>;
+<hasGender> <Male>;
+<hasNextEvolution> <Carabaffe>;
+<hasType> <Water>;
+<isWild> "false"^^xsd:boolean;
+<hasEnemy> <Qulbutoké>.
+
+<Carabaffe> a <Pokemon>;
+<hasGender> <Male>;
+<hasNextEvolution> <Tortank>;
+<isWild> "false"^^xsd:boolean;
+<hasType> <Water>.
+
+<Tortank> a <Pokemon>;
+<hasGender> <Male>;
+<isWild> "false"^^xsd:boolean;
+<hasType> <Water>.
+
+
+<Bulbizarre> a <Pokemon>;
+<hasGender> <Male>;
+<hasType> <Grass>;
+<hasType> <Poison>;
+<isWild> "false"^^xsd:boolean;
+<hasNextEvolution> <Herbizarre>;
+<hasEnemy> <Smogogo>.
+
+<Herbizarre> a <Pokemon>;
+<hasGender> <Male>;
+<hasType> <Grass>;
+<hasType> <Poison>;
+<isWild> "false"^^xsd:boolean;
+<hasNextEvolution> <Florizarre>.
+
+<Florizarre> a <Pokemon>;
+<hasGender> <Male>;
+<isWild> "false"^^xsd:boolean;
+<hasType> <Grass>;
+<hasType> <Poison>.
+
+<Salamèche> a <Pokemon>;
+<hasGender> <Female>;
+<isWild> "false"^^xsd:boolean;
+<hasNextEvolution> <Reptincel>;
+<hasType> <Fire>;
+<hasEnemy> <Smogogo>.
+
+<Reptincel> a <Pokemon>;
+<hasType> <Fire>;
+<hasGender> <Female>;
+<isWild> "false"^^xsd:boolean;
+<hasNextEvolution> <Dracofeu>.
+
+<Dracofeu> a <Pokemon>;
+<hasType> <Fire>;
+<hasType> <Flying>;
+<hasGender> <Female>;
+<isCaptured> "true"^^xsd:boolean;
+<hasTrainer> <Jenny>.
+
+
+<Miaouss> a <Pokemon>;
+<hasGender> <Male>;
+<hasType> <Normal>.
+
+<Smogogo> a <Pokemon>;
+<hasGender> <Male>;
+<isCaptured> "true"^^xsd:boolean;
+<hasType> <Poison>.
+
+<Qulbutoké> a <Pokemon>;
+<hasGender> <Male>;
+<isCaptured> "true"^^xsd:boolean;
+<hasType> <Psychic>;
+<hasTrainer> <Ondine>.
