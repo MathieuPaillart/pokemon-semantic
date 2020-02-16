@@ -1,0 +1,4 @@
+prefix h:<http://www.polytech.fr/>
+select * where {
+    h:Herbizarre h:hasEvolution ?z
+}

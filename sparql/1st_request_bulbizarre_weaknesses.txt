@@ -1,0 +1,5 @@
+prefix h:<http://www.polytech.fr/>
+select * where {
+    h:Bulbizarre h:hasType ?y
+    ?y h:hasWeaknesses ?z
+}

@@ -1,0 +1,7 @@
+prefix h:<http://www.polytech.fr/>
+select ?pokemon (count(distinct ?strength) as ?strengthNumber) 
+where {
+    ?pokemon h:name "Dracofeu"
+    ?pokemon h:hasType ?type
+    ?type h:hasStrength ?strength
+}

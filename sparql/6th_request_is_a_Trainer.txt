@@ -1,0 +1,5 @@
+prefix h:<http://www.polytech.fr/>
+select *
+where {
+    ?x a h:Trainer
+}

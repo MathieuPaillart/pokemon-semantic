@@ -1,0 +1,4 @@
+prefix h:<http://www.polytech.fr/>
+select * where {
+    ?x h:hasTrainer ?z
+}
