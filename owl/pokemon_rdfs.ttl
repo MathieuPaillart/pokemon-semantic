@@ -54,7 +54,7 @@
 <Trainer> 
   a owl:Class;
 ## Une personne est un trainer ssi elle possède un pokemon
-owl:equivalentClass [a owl:Restriction; owl:onProperty <hasPokemon>; owl:hasValueFrom <Pokemon>];
+owl:equivalentClass [a owl:Restriction; owl:onProperty <hasPokemon>; owl:someValuesFrom <Pokemon>];
   rdfs:subClassOf <Person>.
 
 <Type>
