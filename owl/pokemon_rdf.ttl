@@ -7,68 +7,68 @@
  
 <Psychic> a <Type>;
 <name> "Psychic"^^xsd:string;
-<hasWeaknesses> <Bug>;
-<hasWeaknesses> <Dragon>.
+<hasWeakness> <Bug>;
+<hasWeakness> <Dragon>.
 
 <Dragon> a <Type>;
 <name> "Dragon"^^xsd:string;
-<hasWeaknesses> <Dragon>.
+<hasWeakness> <Dragon>.
 
 <Fire> a <Type>;
 <name> "Fire"^^xsd:string;
-<hasWeaknesses> <Water>;
-<hasWeaknesses> <Ground>;
-<hasWeaknesses> <Rock>.
+<hasWeakness> <Water>;
+<hasWeakness> <Ground>;
+<hasWeakness> <Rock>.
 
 <Water> a <Type>;
 <name> "Water"^^xsd:string;
-<hasWeaknesses> <Grass>;
-<hasWeaknesses> <Electric>.
+<hasWeakness> <Grass>;
+<hasWeakness> <Electric>.
 
 <Flying> a <Type>;
 <name> "Flying"^^xsd:string;
-<hasWeaknesses> <Rock>;
-<hasWeaknesses> <Electric>.
+<hasWeakness> <Rock>;
+<hasWeakness> <Electric>.
 
 <Grass> a <Type>;
 <name> "Grass"^^xsd:string;
-<hasWeaknesses> <Flying>;
-<hasWeaknesses> <Poison>;
-<hasWeaknesses> <Fire>;
-<hasWeaknesses> <Bug>.
+<hasWeakness> <Flying>;
+<hasWeakness> <Poison>;
+<hasWeakness> <Fire>;
+<hasWeakness> <Bug>.
 
 <Fight> a <Type>;
 <name> "Fight"^^xsd:string;
-<hasWeaknesses> <Flying>;
-<hasWeaknesses> <Psychic>.
+<hasWeakness> <Flying>;
+<hasWeakness> <Psychic>.
 
 <Poison> a <Type>;
 <name> "Poison"^^xsd:string;
-<hasWeaknesses> <Ground>;
-<hasWeaknesses> <Psychic>.
+<hasWeakness> <Ground>;
+<hasWeakness> <Psychic>.
 
 <Normal> a <Type>;
 <name> "Normal"^^xsd:string;
-<hasWeaknesses> <Fight>.
+<hasWeakness> <Fight>.
 
 <Bug> a <Type>;
 <name> "Bug"^^xsd:string;
-<hasWeaknesses> <Flying>;
-<hasWeaknesses> <Rock>;
-<hasWeaknesses> <Fire>.
+<hasWeakness> <Flying>;
+<hasWeakness> <Rock>;
+<hasWeakness> <Fire>.
 
 <Ground> a <Type>;
 <name> "Ground"^^xsd:string;
-<hasWeaknesses> <Water>;
-<hasWeaknesses> <Grass>.
+<hasWeakness> <Water>;
+<hasWeakness> <Grass>.
 
 <Rock> a <Type>;
 <name> "Rock"^^xsd:string;
-<hasWeaknesses> <Water>.
+<hasWeakness> <Water>.
 
 <Electric> a <Type>;
 <name> "Electric"^^xsd:string;
-<hasWeaknesses> <Ground>.
+<hasWeakness> <Ground>.
 
 <Mathieu> a <Trainer>;
 <hasGender> <Male>;
@@ -79,7 +79,7 @@
 <hasGender> <Male>;
 <age> "23"^^xsd:integer.
 
-<Sacha> a <Trainer>;
+<Sacha> a <Person>;
 <hasGender> <Male>;
 <age> "21"^^xsd:integer;
 <hasPokemon> <Miaoous>.
@@ -105,25 +105,25 @@
 
 <Raichu> a <Pokemon>;
 <hasGender> <Female>;
-<isWild> "false"^^xsd:boolean;
+<isWild> "true"^^xsd:boolean;
 <hasType> <Electric>.
 
 <Carapuce> a <Pokemon>;
 <hasGender> <Male>;
 <hasNextEvolution> <Carabaffe>;
 <hasType> <Water>;
-<isWild> "false"^^xsd:boolean;
+<isWild> "true"^^xsd:boolean;
 <hasEnemy> <Qulbutoké>.
 
 <Carabaffe> a <Pokemon>;
 <hasGender> <Male>;
 <hasNextEvolution> <Tortank>;
-<isWild> "false"^^xsd:boolean;
+<isWild> "true"^^xsd:boolean;
 <hasType> <Water>.
 
 <Tortank> a <Pokemon>;
 <hasGender> <Male>;
-<isWild> "false"^^xsd:boolean;
+<isWild> "true"^^xsd:boolean;
 <hasType> <Water>.
 
 
@@ -131,7 +131,7 @@
 <hasGender> <Male>;
 <hasType> <Grass>;
 <hasType> <Poison>;
-<isWild> "false"^^xsd:boolean;
+<isWild> "true"^^xsd:boolean;
 <hasNextEvolution> <Herbizarre>;
 <hasEnemy> <Smogogo>.
 
@@ -139,18 +139,19 @@
 <hasGender> <Male>;
 <hasType> <Grass>;
 <hasType> <Poison>;
-<isWild> "false"^^xsd:boolean;
+<isWild> "true"^^xsd:boolean;
 <hasNextEvolution> <Florizarre>.
 
 <Florizarre> a <Pokemon>;
 <hasGender> <Male>;
-<isWild> "false"^^xsd:boolean;
+<isWild> "true"^^xsd:boolean;
 <hasType> <Grass>;
 <hasType> <Poison>.
 
 <Salamèche> a <Pokemon>;
 <hasGender> <Female>;
 <isWild> "false"^^xsd:boolean;
+<isCaptured> "true"^^xsd:boolean;
 <hasNextEvolution> <Reptincel>;
 <hasType> <Fire>;
 <hasEnemy> <Smogogo>.
@@ -158,10 +159,11 @@
 <Reptincel> a <Pokemon>;
 <hasType> <Fire>;
 <hasGender> <Female>;
-<isWild> "false"^^xsd:boolean;
+<isWild> "true"^^xsd:boolean;
 <hasNextEvolution> <Dracofeu>.
 
 <Dracofeu> a <Pokemon>;
+<name> "Dracofeu"^^xsd:string;
 <hasType> <Fire>;
 <hasType> <Flying>;
 <hasGender> <Female>;
@@ -171,11 +173,12 @@
 
 <Miaouss> a <Pokemon>;
 <hasGender> <Male>;
+<isCaptured> "true"^^xsd:boolean;
 <hasType> <Normal>.
 
 <Smogogo> a <Pokemon>;
 <hasGender> <Male>;
-<isCaptured> "true"^^xsd:boolean;
+<isWild> "true"^^xsd:boolean;
 <hasType> <Poison>.
 
 <Qulbutoké> a <Pokemon>;

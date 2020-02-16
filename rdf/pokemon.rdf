@@ -7,68 +7,68 @@
  
 <Psychic> a <Type>;
 <name> "Psychic"^^xsd:string;
-<hasWeaknesses> <Bug>;
-<hasWeaknesses> <Dragon>.
+<hasWeakness> <Bug>;
+<hasWeakness> <Dragon>.
 
 <Dragon> a <Type>;
 <name> "Dragon"^^xsd:string;
-<hasWeaknesses> <Dragon>.
+<hasWeakness> <Dragon>.
 
 <Fire> a <Type>;
 <name> "Fire"^^xsd:string;
-<hasWeaknesses> <Water>;
-<hasWeaknesses> <Ground>;
-<hasWeaknesses> <Rock>.
+<hasWeakness> <Water>;
+<hasWeakness> <Ground>;
+<hasWeakness> <Rock>.
 
 <Water> a <Type>;
 <name> "Water"^^xsd:string;
-<hasWeaknesses> <Grass>;
-<hasWeaknesses> <Electric>.
+<hasWeakness> <Grass>;
+<hasWeakness> <Electric>.
 
 <Flying> a <Type>;
 <name> "Flying"^^xsd:string;
-<hasWeaknesses> <Rock>;
-<hasWeaknesses> <Electric>.
+<hasWeakness> <Rock>;
+<hasWeakness> <Electric>.
 
 <Grass> a <Type>;
 <name> "Grass"^^xsd:string;
-<hasWeaknesses> <Flying>;
-<hasWeaknesses> <Poison>;
-<hasWeaknesses> <Fire>;
-<hasWeaknesses> <Bug>.
+<hasWeakness> <Flying>;
+<hasWeakness> <Poison>;
+<hasWeakness> <Fire>;
+<hasWeakness> <Bug>.
 
 <Fight> a <Type>;
 <name> "Fight"^^xsd:string;
-<hasWeaknesses> <Flying>;
-<hasWeaknesses> <Psychic>.
+<hasWeakness> <Flying>;
+<hasWeakness> <Psychic>.
 
 <Poison> a <Type>;
 <name> "Poison"^^xsd:string;
-<hasWeaknesses> <Ground>;
-<hasWeaknesses> <Psychic>.
+<hasWeakness> <Ground>;
+<hasWeakness> <Psychic>.
 
 <Normal> a <Type>;
 <name> "Normal"^^xsd:string;
-<hasWeaknesses> <Fight>.
+<hasWeakness> <Fight>.
 
 <Bug> a <Type>;
 <name> "Bug"^^xsd:string;
-<hasWeaknesses> <Flying>;
-<hasWeaknesses> <Rock>;
-<hasWeaknesses> <Fire>.
+<hasWeakness> <Flying>;
+<hasWeakness> <Rock>;
+<hasWeakness> <Fire>.
 
 <Ground> a <Type>;
 <name> "Ground"^^xsd:string;
-<hasWeaknesses> <Water>;
-<hasWeaknesses> <Grass>.
+<hasWeakness> <Water>;
+<hasWeakness> <Grass>.
 
 <Rock> a <Type>;
 <name> "Rock"^^xsd:string;
-<hasWeaknesses> <Water>.
+<hasWeakness> <Water>.
 
 <Electric> a <Type>;
 <name> "Electric"^^xsd:string;
-<hasWeaknesses> <Ground>.
+<hasWeakness> <Ground>.
 
 <Mathieu> a <Trainer>;
 <hasGender> <Male>;

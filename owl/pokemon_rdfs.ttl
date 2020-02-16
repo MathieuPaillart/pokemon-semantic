@@ -1,6 +1,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @base <http://www.polytech.fr/pokemon#> .
 
 
@@ -40,10 +41,20 @@
   a owl:Class;
   rdfs:subClassOf <Animal>.
 
+<CapturedPokemon> 
+ a owl:Class;
+ rdfs:subClassOf <Pokemon>;
+ owl:equivalentClass [a owl:Restriction; owl:onProperty <hasTrainer> ;owl:someValuesFrom <Trainer>].
 
+<WildPokemon>
+  a owl:Class;
+  rdfs:subClassOf <Pokemon>;
+  owl:equivalentClass [a owl:Restriction; owl:onProperty <isWild>; owl:hasValue "true"^^xsd:boolean];
+  owl:disjointWith <CapturedPokemon>.
 <Trainer> 
   a owl:Class;
 ## Une personne est un trainer ssi elle possède un pokemon
+owl:equivalentClass [a owl:Restriction; owl:onProperty <hasPokemon>; owl:hasValueFrom <Pokemon>];
   rdfs:subClassOf <Person>.
 
 <Type>
@@ -62,6 +73,7 @@
 
 <hasPreviousEvolution>
   a owl:ObjectProperty;
+  rdfs:subPropertyOf <hasEvolution>;
   owl:inverseOf <hasNextEvolution>.
 
 <hasPokemon>
@@ -81,12 +93,16 @@
   rdfs:domain <Pokemon>;
   rdfs:range rdfs:Literal.
 
-<hasWeaknesses>
+<hasWeakness>
   a owl:ObjectProperty;
   ##Cardinalité entre 1 et 3 weaknesses
   rdfs:domain <Type>;
-  rdfs:range rdfs:Literal.
+  rdfs:range <Type>.
   
+<hasStrength>
+  owl:inverseOf <hasWeakness>;
+  rdfs:domain <Type>;
+  rdfs:range <Type>.
 <hasEnemy> 
   a owl:SymmetricProperty;
   rdfs:domain <Animal>;
