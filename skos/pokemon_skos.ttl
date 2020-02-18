@@ -1,0 +1,51 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <http://www.polytech.fr/pokemon#> .
+
+<PokemonTheme>
+    a skos:ConceptScheme ;
+
+<Animal>
+    a skos:Concept ;
+    skos:inScheme <PokemonTheme> ;
+    skos:definition "a living organism that feeds on organic matter, typically having specialized sense organs and nervous system and able to respond rapidly to stimuli." ;
+    skos:prefLabel "animal"@en .
+
+<Monster>
+    a skos:Concept ;
+    skos:inScheme <PokemonTheme> ;
+    skos:prefLabel "monster"@en ;
+    skos:altLabel   "creature"@en ;
+    skos:broader <Animal> ;
+    skos:narrower <Pokemon> .
+
+<Pokemon>
+    a skos:Concept ;
+    skos:inScheme <PokemonTheme> ;
+    skos:prefLabel "monster"@en ;
+    skos:example "pikachu est un pokémon"@fr ;
+    skos:inScheme <PokemonTheme> .
+
+<Male>
+    a skos:Concept ;
+    skos:related <Female> .
+
+<Female>    
+    a skos:Concept ;
+
+<Person> 
+    a skos:Concept ;
+
+<CapturedPokemon> 
+    a skos:Concept ;
+    skos:inScheme <PokemonTheme> .
+
+<WildPokemon>
+    a skos:Concept ;
+    skos:inScheme <PokemonTheme> .
+
+<Trainer> 
+    a skos:Concept ;
+    skos:inScheme <PokemonTheme> .
+
+<Type>
+    a skos:Concept ;

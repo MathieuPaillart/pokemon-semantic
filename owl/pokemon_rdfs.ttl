@@ -142,6 +142,8 @@ owl:equivalentClass [a owl:Restriction; owl:onProperty <hasPokemon>; owl:someVal
   rdfs:domain <Animal>;
   rdfs:label "name"@en, "nom"@fr ;
   rdfs:comment "nickname of a team"@en, "pseudo de l'équipe"@fr .
+
+# TODO : restrictions only lower case
 <name>
   a owl:FunctionalProperty;
   rdfs:range rdfs:Literal.
