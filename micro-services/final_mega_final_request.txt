@@ -1,0 +1,65 @@
+prefix pok: <http://www.polytech.fr/>.
+INSERT {
+	?pokemon a pok:Pokemon;
+	pok:nationalPokedexNumber ?nationalPokedexNumber;
+	pok:baseExperience ?baseExperience;
+	pok:weight ?weight;
+	pok:height ?height;
+	pok:hp ?hp;
+	pok:hasAbility ?abilityURI;
+	pok:hasMove ?moveURI;
+	pok:hasType ?typeURI;
+	pok:imageLink ?imageUrl;
+	pok:wikipediaLink ?isPrimaryTopicOf.
+
+	?abilityURI a pok:Ability;
+	pok:name ?abilityname.
+
+	?moveURI a pok:Move;
+	pok:name ?movename;
+	pok:pp ?pp;
+	pok:accuracy ?accuracy;
+	pok:power ?power;
+	pok:typename ?typeURI;
+	pok:effect ?effect.
+
+	?typeURI a pok:Type;
+	pok:name ?typename.
+}
+WHERE{
+	?pokemon a pok:Pokemon
+	?pokemon pok:name ?name
+
+bind (uri(concat("http://localhost/sparql-ms/pokemontcg/findCards/?keyword=", ?name))  as ?pokemontcg)
+
+	SERVICE ?pokemontcg
+	{	?pokemontcgapi pok:nationalPokedexNumber ?nationalPokedexNumber; pok:hp ?hp;pok:imageUrl ?imageUrl. }
+
+	bind (uri(concat("http://localhost/sparql-ms/pokeapi/findPokemon/?keyword=", ?name)) as ?pokeapi_findpokemon)
+	SERVICE ?pokeapi_findpokemon
+{ SELECT * WHERE {
+           ?pokemonpokeapi pok:baseExperience ?baseExperience; 
+	pok:weight ?weight; 
+	pok:height ?height;
+            pok:abilityname ?abilityname;
+	pok:movename ?movename;
+	pok:type ?typename.
+          } LIMIT 4
+}
+
+BIND(IRI(CONCAT("http://www.polytech.fr/",concat(UCASE(substr(?typename, 1,1)),substr(?typename,2)))) as ?typeURI)
+bind(uri(concat("http://localhost/sparql-ms/pokeapi/findMove/?keyword=",?movename)) as ?pokeapi_findmove)
+SERVICE ?pokeapi_findmove
+	{ ?movepokeapi pok:pp ?pp; pok:power ?power; pok:accuracy ?accuracy; pok:effect ?effect; pok:typename ?typename.}
+
+BIND(IRI(CONCAT("http://www.polytech.fr/",concat(UCASE(substr(?typename, 1,1)),substr(?typename,2)))) as ?typeURI)
+BIND(IRI(CONCAT("http://www.polytech.fr/",concat(UCASE(substr(?abilityname, 1,1)),substr(?abilityname,2)))) as ?abilityURI)
+BIND(IRI(CONCAT("http://www.polytech.fr/",concat(UCASE(substr(?movename, 1,1)),substr(?movename,2)))) as ?moveURI)
+BIND(IRI(CONCAT("http://dbpedia.org/resource/",  concat(UCASE(substr(?name, 1,1)),substr(?name,2)))) as ?name_url)
+  service <http://dbpedia.org/sparql/> {
+     select ?isPrimaryTopicOf ?name_url where {
+       ?name_url foaf:isPrimaryTopicOf ?isPrimaryTopicOf
+     }
+}
+
+}

@@ -1,0 +1,31 @@
+prefix pok: <http://www.polytech.fr/>.
+INSERT {
+	?pokemon a pok:Pokemon;
+	pok:nationalPokedexNumber ?nationalPokedexNumber;
+	pok:baseExperience ?baseExperience;
+	pok:weight ?weight;
+	pok:height ?height;
+	pok:hp ?hp;
+	pok:isPrimaryTopicOf ?isPrimaryTopicOf.
+}
+WHERE{
+	?pokemon a pok:Pokemon
+	?pokemon pok:name ?name
+
+bind (uri(concat("http://localhost/sparql-ms/pokemontcg/findCards/?keyword=", ?name))  as ?pokemontcg)
+
+	SERVICE ?pokemontcg
+	{	?pokemontcgapi pok:nationalPokedexNumber ?nationalPokedexNumber; pok:hp ?hp.}
+
+
+	bind (uri(concat("http://localhost/sparql-ms/pokeapi/findPokemon/?keyword=", ?name)) as ?pokeapi)
+	SERVICE ?pokeapi
+	{	?pokemonpokeapi pok:baseExperience ?baseExperience; pok:weight ?weight; pok:height ?height.}
+BIND(IRI(CONCAT("http://dbpedia.org/resource/",  concat(UCASE(substr(?name, 1,1)),substr(?name,2)))) as ?name_url)
+  service <http://dbpedia.org/sparql/> {
+     select ?isPrimaryTopicOf ?name_url where {
+       ?name_url foaf:isPrimaryTopicOf ?isPrimaryTopicOf
+     }
+}
+
+}
