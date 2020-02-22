@@ -1,261 +1,603 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@base <http://www.polytech.fr/pokemon#> .
 
-<http://www.polytech.fr/Blastoise> a <http://www.polytech.fr/Pokemon> ;
-  <http://www.polytech.fr/baseExperience> 239 ;
-  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Male> ;
-  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Water> ;
-  <http://www.polytech.fr/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Blastoise> ;
-  <http://www.polytech.fr/isWild> false ;
-  <http://www.polytech.fr/name> "blastoise" ;
-  <http://www.polytech.fr/nationalPokedexNumber> 9 .
+###Type 
 
-<http://www.polytech.fr/Bug> a <http://www.polytech.fr/Type> ;
-  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Fire> ;
-  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Flying> ;
-  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Rock> ;
-  <http://www.polytech.fr/name> "Bug" .
+<Bug> a <Type> ;
+  <hasWeakness> <Fire> ;
+  <hasWeakness> <Flying> ;
+  <hasWeakness> <Rock> ;
+  <name> "Bug" .
+  
+  
+<Rock> a <Type> ;
+  <hasWeakness> <Water> ;
+  <name> "Rock" .
 
-<http://www.polytech.fr/Bulbasaur> a <http://www.polytech.fr/Pokemon> ;
-  <http://www.polytech.fr/baseExperience> 64 ;
-  <http://www.polytech.fr/hasEnemy> <http://www.polytech.fr/Weezing> ;
-  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Male> ;
-  <http://www.polytech.fr/hasNextEvolution> <http://www.polytech.fr/Ivysaur> ;
-  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Grass> ;
-  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Poison> ;
-  <http://www.polytech.fr/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Bulbasaur> ;
-  <http://www.polytech.fr/isWild> false ;
-  <http://www.polytech.fr/name> "bulbasaur" ;
-  <http://www.polytech.fr/nationalPokedexNumber> 1 .
+<Water> a <Type> ;
+  <hasWeakness> <Electric> ;
+  <hasWeakness> <Grass> ;
+  <name> "Water".
 
-<http://www.polytech.fr/Charizard> a <http://www.polytech.fr/Pokemon> ;
-  <http://www.polytech.fr/baseExperience> 240 ;
-  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Female> ;
-  <http://www.polytech.fr/hasTrainer> <http://www.polytech.fr/Jenny> ;
-  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Fire> ;
-  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Flying> ;
-  <http://www.polytech.fr/isCaptured> true ;
-  <http://www.polytech.fr/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Charizard> ;
-  <http://www.polytech.fr/name> "charizard" ;
-  <http://www.polytech.fr/nationalPokedexNumber> 6 .
+<Poison> a <Type> ;
+  <hasWeakness> <Ground> ;
+  <hasWeakness> <Psychic> ;
+  <name> "Poison" .
 
-<http://www.polytech.fr/Charmander> a <http://www.polytech.fr/Pokemon> ;
-  <http://www.polytech.fr/baseExperience> 62 ;
-  <http://www.polytech.fr/hasEnemy> <http://www.polytech.fr/Weezing> ;
-  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Female> ;
-  <http://www.polytech.fr/hasNextEvolution> <http://www.polytech.fr/Charmeleon> ;
-  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Fire> ;
-  <http://www.polytech.fr/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Charmander> ;
-  <http://www.polytech.fr/isWild> false ;
-  <http://www.polytech.fr/name> "charmander" ;
-  <http://www.polytech.fr/nationalPokedexNumber> 4 .
+<Psychic> a <Type> ;
+  <hasWeakness> <Bug> ;
+  <hasWeakness> <Dragon> ;
+  <name> "Psychic" .
 
-<http://www.polytech.fr/Charmeleon> a <http://www.polytech.fr/Pokemon> ;
-  <http://www.polytech.fr/baseExperience> 142 ;
-  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Female> ;
-  <http://www.polytech.fr/hasNextEvolution> <http://www.polytech.fr/Charizard> ;
-  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Fire> ;
-  <http://www.polytech.fr/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Charmeleon> ;
-  <http://www.polytech.fr/isWild> false ;
-  <http://www.polytech.fr/name> "charmeleon" ;
-  <http://www.polytech.fr/nationalPokedexNumber> 5 .
+<Normal> a <Type> ;
+  <hasWeakness> <Fight> ;
+  <name> "Normal" .
+  
+  <Ground> a <Type> ;
+  <hasWeakness> <Grass> ;
+  <hasWeakness> <Water> ;
+  <name> "Ground" .
 
-<http://www.polytech.fr/Dragon> a <http://www.polytech.fr/Type> ;
-  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Dragon> ;
-  <http://www.polytech.fr/name> "Dragon" .
+<Grass> a <Type> ;
+  <hasWeakness> <Bug> ;
+  <hasWeakness> <Fire> ;
+  <hasWeakness> <Flying> ;
+  <hasWeakness> <Poison> ;
+  <name> "Grass".
+  
+<Dragon> a <Type> ;
+  <hasWeakness> <Dragon> ;
+  <name> "Dragon" .
 
-<http://www.polytech.fr/Electric> a <http://www.polytech.fr/Type> ;
-  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Ground> ;
-  <http://www.polytech.fr/name> "Electric" .
 
-<http://www.polytech.fr/Fight> a <http://www.polytech.fr/Type> ;
-  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Flying> ;
-  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Psychic> ;
-  <http://www.polytech.fr/name> "Fight" .
+<Electric> a <Type> ;
+  <hasWeakness> <Ground> ;
+  <name> "Electric".
+  
+ 
+<Fight> a <Type> ;
+  <hasWeakness> <Flying> ;
+  <hasWeakness> <Psychic> ;
+  <name> "Fight" .
 
-<http://www.polytech.fr/Fire> a <http://www.polytech.fr/Type> ;
-  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Ground> ;
-  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Rock> ;
-  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Water> ;
-  <http://www.polytech.fr/name> "Fire" .
+<Fire> a <Type> ;
+  <hasWeakness> <Ground> ;
+  <hasWeakness> <Rock> ;
+  <hasWeakness> <Water> ;
+  <name> "Fire".
+  
+  
+<Flying> a <Type> ;
+  <hasWeakness> <Electric> ;
+  <hasWeakness> <Rock> ;
+  <name> "Flying" .
 
-<http://www.polytech.fr/Florian> a <http://www.polytech.fr/Trainer> ;
-  <http://www.polytech.fr/age> 23 ;
-  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Male> .
 
-<http://www.polytech.fr/Flying> a <http://www.polytech.fr/Type> ;
-  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Electric> ;
-  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Rock> ;
-  <http://www.polytech.fr/name> "Flying" .
 
-<http://www.polytech.fr/Grass> a <http://www.polytech.fr/Type> ;
-  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Bug> ;
-  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Fire> ;
-  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Flying> ;
-  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Poison> ;
-  <http://www.polytech.fr/name> "Grass" .
+###Trainer
 
-<http://www.polytech.fr/Ground> a <http://www.polytech.fr/Type> ;
-  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Grass> ;
-  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Water> ;
-  <http://www.polytech.fr/name> "Ground" .
 
-<http://www.polytech.fr/Ivysaur> a <http://www.polytech.fr/Pokemon> ;
-  <http://www.polytech.fr/baseExperience> 142 ;
-  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Male> ;
-  <http://www.polytech.fr/hasNextEvolution> <http://www.polytech.fr/Venusaur> ;
-  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Grass> ;
-  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Poison> ;
-  <http://www.polytech.fr/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Ivysaur> ;
-  <http://www.polytech.fr/isWild> false ;
-  <http://www.polytech.fr/name> "ivysaur" ;
-  <http://www.polytech.fr/nationalPokedexNumber> 2 .
 
-<http://www.polytech.fr/Jenny> a <http://www.polytech.fr/Trainer> ;
-  <http://www.polytech.fr/age> 32 ;
-  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Female> .
+<Sacha> a <Person> ;
+  <age> 21 ;
+  <hasGender> <Male> ;
+  <hasPokemon> <Miaoous> .
+  
+<Jenny> a <Trainer> ;
+  <age> 32 ;
+  <hasGender> <Female> .
+  
+<Mathieu> a <Trainer> ;
+  <age> 22 ;
+  <hasGender> <Male> ;
+  <hasPokemon> <Salamèche> .
+  
+<Florian> a <Trainer> ;
+  <age> 23 ;
+  <hasGender> <Male> .
 
-<http://www.polytech.fr/Mathieu> a <http://www.polytech.fr/Trainer> ;
-  <http://www.polytech.fr/age> 22 ;
-  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Male> ;
-  <http://www.polytech.fr/hasPokemon> <http://www.polytech.fr/Charmander> .
+<Ondine> a <Trainer> ;
+  <age> 25 ;
+  <hasGender> <Female> .
 
-<http://www.polytech.fr/Meowth> a <http://www.polytech.fr/Pokemon> ;
-  <http://www.polytech.fr/baseExperience> 58 ;
-  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Male> ;
-  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Normal> ;
-  <http://www.polytech.fr/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Meowth> ;
-  <http://www.polytech.fr/name> "meowth" ;
-  <http://www.polytech.fr/nationalPokedexNumber> 52 .
+###Pokemon
 
-<http://www.polytech.fr/Normal> a <http://www.polytech.fr/Type> ;
-  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Fight> ;
-  <http://www.polytech.fr/name> "Normal" .
 
-<http://www.polytech.fr/Ondine> a <http://www.polytech.fr/Trainer> ;
-  <http://www.polytech.fr/age> 25 ;
-  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Female> .
+<Meowth> a <Pokemon> ;
+  <baseExperience> 58 ;
+  <hasAbility> <Pickup> ;
+  <hasGender> <Male> ;
+  <hasMove> <Facade> ;
+  <hasMove> <Fake-out> ;
+  <hasMove> <Uproar> ;
+  <hasType> <Normal> ;
+  <height> 4 ;
+  <hp> "60" ;
+  <imageLink> "https://images.pokemontcg.io/xy11/88.png" ;
+  <isCaptured> true ;
+  <name> "meowth" ;
+  <nationalPokedexNumber> 52 ;
+  <weight> 42 ;
+  <wikipediaLink> <http://en.wikipedia.org/wiki/Meowth> .
+  
+<Blastoise> a <Pokemon> ;
+  <baseExperience> 239 ;
+  <hasAbility> <Torrent> ;
+  <hasGender> <Male> ;
+  <hasMove> <Aqua-tail> ;
+  <hasMove> <Dive> ;
+  <hasMove> <Earthquake> ;
+  <hasType> <Water> ;
+  <height> 16 ;
+  <hp> "180" ;
+  <imageLink> "https://images.pokemontcg.io/xyp/XY122.png" ;
+  <isWild> true ;
+  <name> "blastoise" ;
+  <nationalPokedexNumber> 9 ;
+  <weight> 855 ;
+  <wikipediaLink> <http://en.wikipedia.org/wiki/Blastoise> .
 
-<http://www.polytech.fr/Pikachu> a <http://www.polytech.fr/Pokemon> ;
-  <http://www.polytech.fr/baseExperience> 112 ;
-  <http://www.polytech.fr/hasEnemy> <http://www.polytech.fr/Miaoous> ;
-  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Female> ;
-  <http://www.polytech.fr/hasNextEvolution> <http://www.polytech.fr/Raichu> ;
-  <http://www.polytech.fr/hasTrainer> <http://www.polytech.fr/Florian> ;
-  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Electric> ;
-  <http://www.polytech.fr/isCaptured> true ;
-  <http://www.polytech.fr/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Pikachu> ;
-  <http://www.polytech.fr/name> "pikachu" ;
-  <http://www.polytech.fr/nationalPokedexNumber> 25 .
 
-<http://www.polytech.fr/Poison> a <http://www.polytech.fr/Type> ;
-  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Ground> ;
-  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Psychic> ;
-  <http://www.polytech.fr/name> "Poison" .
 
-<http://www.polytech.fr/Psychic> a <http://www.polytech.fr/Type> ;
-  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Bug> ;
-  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Dragon> ;
-  <http://www.polytech.fr/name> "Psychic" .
+<Bulbasaur> a <Pokemon> ;
+  <baseExperience> 64 ;
+  <hasAbility> <Overgrow> ;
+  <hasEnemy> <Weezing> ;
+  <hasGender> <Male> ;
+  <hasMove> <Razor-leaf> ;
+  <hasMove> <Solar-beam> ;
+  <hasNextEvolution> <Ivysaur> ;
+  <hasType> <Grass> ;
+  <hasType> <Poison> ;
+  <height> 7 ;
+  <hp> "50" ;
+  <imageLink> "https://images.pokemontcg.io/ex6/55.png" ;
+  <isWild> true ;
+  <name> "bulbasaur" ;
+  <nationalPokedexNumber> 1 ;
+  <weight> 69 ;
+  <wikipediaLink> <http://en.wikipedia.org/wiki/Bulbasaur> .
 
-<http://www.polytech.fr/Raichu> a <http://www.polytech.fr/Pokemon> ;
-  <http://www.polytech.fr/baseExperience> 218 ;
-  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Female> ;
-  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Electric> ;
-  <http://www.polytech.fr/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Raichu> ;
-  <http://www.polytech.fr/isWild> false ;
-  <http://www.polytech.fr/name> "raichu" ;
-  <http://www.polytech.fr/nationalPokedexNumber> 26 .
+<Charizard> a <Pokemon> ;
+  <baseExperience> 240 ;
+  <hasAbility> <Solar-power> ;
+  <hasGender> <Female> ;
+  <hasMove> <Dynamic-punch> ;
+  <hasMove> <Flame-charge> ;
+  <hasTrainer> <Jenny> ;
+  <hasType> <Fire> ;
+  <hasType> <Flying> ;
+  <height> 17 ;
+  <hp> "120" ;
+  <imageLink> "https://images.pokemontcg.io/ex3/100.png" ;
+  <isCaptured> true ;
+  <name> "charizard" ;
+  <nationalPokedexNumber> 6 ;
+  <weight> 905 ;
+  <wikipediaLink> <http://en.wikipedia.org/wiki/Charizard> .
 
-<http://www.polytech.fr/Rock> a <http://www.polytech.fr/Type> ;
-  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Water> ;
-  <http://www.polytech.fr/name> "Rock" .
+<Charmander> a <Pokemon> ;
+  <baseExperience> 62 ;
+  <hasAbility> <Blaze> ;
+  <hasEnemy> <Smogogo> ;
+  <hasGender> <Female> ;
+  <hasMove> <Brick-break> ;
+  <hasMove> <Facade> ;
+  <hasMove> <Focus-punch> ;
+  <hasMove> <Secret-power> ;
+  <hasNextEvolution> <Reptincel> ;
+  <hasType> <Fire> ;
+  <height> 6 ;
+  <hp> "60" ;
+  <imageLink> "https://images.pokemontcg.io/det1/4.png" ;
+  <isCaptured> true ;
+  <isWild> false ;
+  <name> "charmander" ;
+  <nationalPokedexNumber> 4 ;
+  <weight> 85 ;
+  <wikipediaLink> <http://en.wikipedia.org/wiki/Charmander> .
 
-<http://www.polytech.fr/Sacha> a <http://www.polytech.fr/Trainer> ;
-  <http://www.polytech.fr/age> 21 ;
-  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Male> ;
-  <http://www.polytech.fr/hasPokemon> <http://www.polytech.fr/Miaoous> .
+<Charmeleon> a <Pokemon> ;
+  <baseExperience> 142 ;
+  <hasAbility> <Solar-power> ;
+  <hasGender> <Female> ;
+  <hasMove> <Flame-burst> ;
+  <hasMove> <Flame-charge> ;
+  <hasNextEvolution> <Dracofeu> ;
+  <hasType> <Fire> ;
+  <height> 11 ;
+  <hp> "70" ;
+  <imageLink> "https://images.pokemontcg.io/ex3/99.png" ;
+  <isWild> true ;
+  <name> "charmeleon" ;
+  <nationalPokedexNumber> 5 ;
+  <weight> 190 ;
+  <wikipediaLink> <http://en.wikipedia.org/wiki/Charmeleon> .
+  
+  
 
-<http://www.polytech.fr/Squirtle> a <http://www.polytech.fr/Pokemon> ;
-  <http://www.polytech.fr/baseExperience> 63 ;
-  <http://www.polytech.fr/hasEnemy> <http://www.polytech.fr/Wobbuffet> ;
-  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Male> ;
-  <http://www.polytech.fr/hasNextEvolution> <http://www.polytech.fr/Wartortle> ;
-  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Water> ;
-  <http://www.polytech.fr/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Squirtle> ;
-  <http://www.polytech.fr/isWild> false ;
-  <http://www.polytech.fr/name> "squirtle" ;
-  <http://www.polytech.fr/nationalPokedexNumber> 7 .
+<Ivysaur> a <Pokemon> ;
+  <baseExperience> 142 ;
+  <hasAbility> <Overgrow> ;
+  <hasGender> <Male> ;
+  <hasMove> <Grass-pledge> ;
+  <hasNextEvolution> <Venusaur> ;
+  <hasType> <Grass> ;
+  <hasType> <Poison> ;
+  <height> 10 ;
+  <hp> "80" ;
+  <imageLink> "https://images.pokemontcg.io/ex6/35.png" ;
+  <isWild> true ;
+  <name> "ivysaur" ;
+  <nationalPokedexNumber> 2 ;
+  <weight> 130 ;
+  <wikipediaLink> <http://en.wikipedia.org/wiki/Ivysaur> .
 
-<http://www.polytech.fr/Venusaur> a <http://www.polytech.fr/Pokemon> ;
-  <http://www.polytech.fr/baseExperience> 236 ;
-  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Male> ;
-  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Grass> ;
-  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Poison> ;
-  <http://www.polytech.fr/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Venusaur> ;
-  <http://www.polytech.fr/isWild> false ;
-  <http://www.polytech.fr/name> "venusaur" ;
-  <http://www.polytech.fr/nationalPokedexNumber> 3 .
 
-<http://www.polytech.fr/Wartortle> a <http://www.polytech.fr/Pokemon> ;
-  <http://www.polytech.fr/baseExperience> 142 ;
-  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Male> ;
-  <http://www.polytech.fr/hasNextEvolution> <http://www.polytech.fr/Blastoise> ;
-  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Water> ;
-  <http://www.polytech.fr/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Wartortle> ;
-  <http://www.polytech.fr/isWild> false ;
-  <http://www.polytech.fr/name> "wartortle" ;
-  <http://www.polytech.fr/nationalPokedexNumber> 8 .
+<Squirtle> a <Pokemon> ;
+  <baseExperience> 63 ;
+  <hasAbility> <Rain-dish> ;
+  <hasAbility> <Torrent> ;
+  <hasEnemy> <Wobbuffet> ;
+  <hasGender> <Male> ;
+  <hasMove> <Confusion> ;
+  <hasMove> <Dive> ;
+  <hasMove> <Muddy-water> ;
+  <hasMove> <Rage> ;
+  <hasMove> <Water-spout> ;
+  <hasNextEvolution> <Wartortle> ;
+  <hasType> <Water> ;
+  <height> 5 ;
+  <hp> "60" ;
+  <imageLink> "https://images.pokemontcg.io/sm10/33.png" ;
+  <isWild> true ;
+  <name> "squirtle" ;
+  <nationalPokedexNumber> 7 ;
+  <weight> 90 ;
+  <wikipediaLink> <http://en.wikipedia.org/wiki/Squirtle> .
 
-<http://www.polytech.fr/Water> a <http://www.polytech.fr/Type> ;
-  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Electric> ;
-  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Grass> ;
-  <http://www.polytech.fr/name> "Water" .
 
-<http://www.polytech.fr/Weezing> a <http://www.polytech.fr/Pokemon> ;
-  <http://www.polytech.fr/baseExperience> 172 ;
-  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Male> ;
-  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Poison> ;
-  <http://www.polytech.fr/isCaptured> true ;
-  <http://www.polytech.fr/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Weezing> ;
-  <http://www.polytech.fr/name> "weezing" ;
-  <http://www.polytech.fr/nationalPokedexNumber> 110 .
+<Pikachu> a <Pokemon> ;
+  <baseExperience> 112 ;
+  <hasAbility> <Static> ;
+  <hasEnemy> <Meowth> ;
+  <hasGender> <Female> ;
+  <hasMove> <Dig> ;
+  <hasMove> <Thunder> ;
+  <hasMove> <Thunder-shock> ;
+  <hasMove> <Thunderbolt> ;
+  <hasNextEvolution> <Raichu> ;
+  <hasTrainer> <Florian> ;
+  <hasType> <Electric> ;
+  <height> 4 ;
+  <hp> "130" ;
+  <imageLink> "https://images.pokemontcg.io/xyp/XY174.png" ;
+  <isCaptured> true ;
+  <name> "pikachu" ;
+  <nationalPokedexNumber> 25 ;
+  <weight> 60 ;
+  <wikipediaLink> <http://en.wikipedia.org/wiki/Pikachu> .
 
-<http://www.polytech.fr/Wobbuffet> a <http://www.polytech.fr/Pokemon> ;
-  <http://www.polytech.fr/baseExperience> 142 ;
-  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Male> ;
-  <http://www.polytech.fr/hasTrainer> <http://www.polytech.fr/Ondine> ;
-  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Psychic> ;
-  <http://www.polytech.fr/isCaptured> true ;
-  <http://www.polytech.fr/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Wobbuffet> ;
-  <http://www.polytech.fr/name> "wobbuffet" ;
-  <http://www.polytech.fr/nationalPokedexNumber> 202 .
 
-<http://www.polytech.fr/age> a rdf:Property .
+<Raichu> a <Pokemon> ;
+  <baseExperience> 218 ;
+  <hasAbility> <Lightning-rod> ;
+  <hasAbility> <Static> ;
+  <hasGender> <Female> ;
+  <hasMove> <Quick-attack> ;
+  <hasMove> <Rage> ;
+  <hasMove> <Thunder-punch> ;
+  <hasType> <Electric> ;
+  <height> 8 ;
+  <hp> "100" ;
+  <imageLink> "https://images.pokemontcg.io/hgss3/83.png" ;
+  <isWild> true ;
+  <name> "raichu" ;
+  <nationalPokedexNumber> 26 ;
+  <weight> 300 ;
+  <wikipediaLink> <http://en.wikipedia.org/wiki/Raichu> .
+  
+  
+<Venusaur> a <Pokemon> ;
+  <baseExperience> 236 ;
+  <hasAbility> <Overgrow> ;
+  <hasGender> <Male> ;
+  <hasMove> <Hyper-beam> ;
+  <hasType> <Grass> ;
+  <hasType> <Poison> ;
+  <height> 20 ;
+  <hp> "140" ;
+  <imageLink> "https://images.pokemontcg.io/bw5/3.png" ;
+  <isWild> true ;
+  <name> "venusaur" ;
+  <nationalPokedexNumber> 3 ;
+  <weight> 1000 ;
+  <wikipediaLink> <http://en.wikipedia.org/wiki/Venusaur> .
 
-<http://www.polytech.fr/baseExperience> a rdf:Property .
+<Wartortle> a <Pokemon> ;
+  <baseExperience> 142 ;
+  <hasAbility> <Torrent> ;
+  <hasGender> <Male> ;
+  <hasMove> <Snore> ;
+  <hasNextEvolution> <Blastoise> ;
+  <hasType> <Water> ;
+  <height> 10 ;
+  <hp> "80" ;
+  <imageLink> "https://images.pokemontcg.io/hgss2/42.png" ;
+  <isWild> true ;
+  <name> "wartortle" ;
+  <nationalPokedexNumber> 8 ;
+  <weight> 225 ;
+  <wikipediaLink> <http://en.wikipedia.org/wiki/Wartortle> .
 
-<http://www.polytech.fr/hasEnemy> a rdf:Property .
+<Weezing> a <Pokemon> ;
+  <hasGender> <Male> ;
+  <hasType> <Poison> ;
+  <isWild> true ;
+  <name> "weezing" .
 
-<http://www.polytech.fr/hasGender> a rdf:Property .
+<Wobbuffet> a <Pokemon> ;
+  <hasGender> <Male> ;
+  <hasTrainer> <Ondine> ;
+  <hasType> <Psychic> ;
+  <isCaptured> true ;
+  <name> "wobbuffet" .
 
-<http://www.polytech.fr/hasNextEvolution> a rdf:Property .
 
-<http://www.polytech.fr/hasPokemon> a rdf:Property .
+###Move
 
-<http://www.polytech.fr/hasTrainer> a rdf:Property .
+<Aqua-tail> a <Move> ;
+  <accuracy> 90 ;
+  <effect> "Inflicts regular damage." ;
+  <name> "aqua-tail" ;
+  <power> 90 ;
+  <pp> 10 ;
+  <moveType> <Water> .
+  
+  <Brick-break> a <Move> ;
+  <accuracy> 100 ;
+  <effect> "Destroys any light screen or reflect on the target's side of the field, then inflicts regular damage." ;
+  <name> "brick-break" ;
+  <power> 75 ;
+  <pp> 15 ;
+  <moveType> <Fighting> .
+  
+  
+<Confusion> a <Move> ;
+  <accuracy> 100 ;
+  <effect> "Inflicts regular damage.  Has a $effect_chance% chance to confuse the target." ;
+  <name> "confusion" ;
+  <power> 50 ;
+  <pp> 25 ;
+  <moveType> <Psychic> .
 
-<http://www.polytech.fr/hasType> a rdf:Property .
+<Dig> a <Move> ;
+  <accuracy> 100 ;
+  <effect> "Inflicts regular damage.  User digs underground for one turn, becoming immune to attack, and hits on the second turn.During the immune turn, earthquake, fissure, and magnitude still hit the user normally, and their power is doubled if appropriate.The user may be hit during its immune turn if under the effect of lock on, mind reader, or no guard.This move cannot be selected by sleep talk." ;
+  <name> "dig" ;
+  <power> 80 ;
+  <pp> 10 ;
+  <moveType> <Ground> .
 
-<http://www.polytech.fr/hasWeakness> a rdf:Property .
+<Dive> a <Move> ;
+  <accuracy> 100 ;
+  <effect> "Inflicts regular damage.  User dives underwater for one turn, becoming immune to attack, and hits on the second turn.During the immune turn, surf, and whirlpool still hit the user normally, and their power is doubled if appropriate.The user may be hit during its immune turn if under the effect of lock on, mind reader, or no guard.This move cannot be selected by sleep talk." ;
+  <name> "dive" ;
+  <power> 80 ;
+  <pp> 10 ;
+  <moveType> <Water> .
 
-<http://www.polytech.fr/isCaptured> a rdf:Property .
 
-<http://www.polytech.fr/isPrimaryTopicOf> a rdf:Property .
+<Dynamic-punch> a <Move> ;
+  <accuracy> 50 ;
+  <effect> "Inflicts regular damage.  Has a $effect_chance% chance to confuse the target." ;
+  <name> "dynamic-punch" ;
+  <power> 100 ;
+  <pp> 5 ;
+  <moveType> <Fighting> .
 
-<http://www.polytech.fr/isWild> a rdf:Property .
+<Earthquake> a <Move> ;
+  <accuracy> 100 ;
+  <effect> "Inflicts regular damage.If the target is in the first turn of dig, this move will hit with double power." ;
+  <name> "earthquake" ;
+  <power> 100 ;
+  <pp> 10 ;
+  <moveType> <Ground> .
 
-<http://www.polytech.fr/name> a rdf:Property .
 
-<http://www.polytech.fr/nationalPokedexNumber> a rdf:Property .
+<Facade> a <Move> ;
+  <accuracy> 100 ;
+  <effect> "Inflicts regular damage.  If the user is burned, paralyzed, or poisoned, this move has double power." ;
+  <name> "facade" ;
+  <power> 70 ;
+  <pp> 20 ;
+  <moveType> <Normal> .
 
-rdf:type a rdf:Property .
+<Fake-out> a <Move> ;
+  <accuracy> 100 ;
+  <effect> "Inflicts regular damage.  Causes the target to flinch.  Can only be used on the user's first turn after entering the field." ;
+  <name> "fake-out" ;
+  <power> 40 ;
+  <pp> 10 ;
+  <moveType> <Normal> .
+  
+<Flame-burst> a <Move> ;
+  <accuracy> 100 ;
+  <effect> "Inflicts regular damage.  If this move successfully hits the target, any Pokémon adjacent to the target are damaged for 1/16 their max HP." ;
+  <name> "flame-burst" ;
+  <power> 70 ;
+  <pp> 15 ;
+  <moveType> <Fire> .
+
+<Flame-charge> a <Move> ;
+  <accuracy> 100 ;
+  <effect> "Inflicts regular damage.  Raises the user's Speed by one stage." ;
+  <name> "flame-charge" ;
+  <power> 50 ;
+  <pp> 20 ;
+  <moveType> <Fire> .
+  
+<Focus-punch> a <Move> ;
+  <accuracy> 100 ;
+  <effect> "Inflicts regular damage.  If the user takes damage this turn before hitting, this move will fail.This move cannot be copied by mirror move, nor selected by assist, metronome, or sleep talk." ;
+  <name> "focus-punch" ;
+  <power> 150 ;
+  <pp> 20 ;
+  <moveType> <Fighting> .
+  
+  
+<Grass-pledge> a <Move> ;
+  <accuracy> 100 ;
+  <effect> "Inflicts regular damage.  If a friendly Pokémon used fire pledge earlier this turn, all opposing Pokémon will take 1/8 their max HP in damage at the end of every turn for four turns (including this one)." ;
+  <name> "grass-pledge" ;
+  <power> 80 ;
+  <pp> 10 ;
+  <moveType> <Grass> .
+
+
+<Hyper-beam> a <Move> ;
+  <accuracy> 90 ;
+  <effect> "Inflicts regular damage.  User loses its next turn to \"recharge\", and cannot attack or switch out during that turn." ;
+  <name> "hyper-beam" ;
+  <power> 150 ;
+  <pp> 5 ;
+  <moveType> <Normal> .
+  
+<Muddy-water> a <Move> ;
+  <accuracy> 85 ;
+  <effect> "Inflicts regular damage.  Has a $effect_chance% chance to lower the target's accuracy by one stage." ;
+  <name> "muddy-water" ;
+  <power> 90 ;
+  <pp> 10 ;
+  <moveType> <Water> .
+  
+  
+<Quick-attack> a <Move> ;
+  <accuracy> 100 ;
+  <effect> "Inflicts regular damage." ;
+  <name> "quick-attack" ;
+  <power> 40 ;
+  <pp> 30 ;
+  <moveType> <Normal> .
+
+<Rage> a <Move> ;
+  <accuracy> 100 ;
+  <effect> "Inflicts regular damage.  Every time the user is hit after it uses this move but before its next action, its Attack raises by one stage." ;
+  <name> "rage" ;
+  <power> 20 ;
+  <pp> 20 ;
+  <moveType> <Normal> .
+  
+  <Razor-leaf> a <Move> ;
+  <accuracy> 95 ;
+  <effect> "Inflicts regular damage.  User's critical hit rate is one level higher when using this move." ;
+  <name> "razor-leaf" ;
+  <power> 55 ;
+  <pp> 25 ;
+  <moveType> <Grass> .
+  
+  
+<Secret-power> a <Move> ;
+  <accuracy> 100 ;
+  <effect> "Inflicts regular damage.  Has a $effect_chance% chance to inflict an effect chosen according to the terrain.Terrain        | Effect-------------- | -------------------------------------------------------------Building       | Paralyzes targetCave           | Makes target flinchDeep water     | Lowers target's Attack by one stageDesert         | Lowers target's accuracy by one stageGrass          | Puts target to sleepMountain       | Makes target flinchRoad           | Lowers target's accuracy by one stageShallow water  | Lowers target's Attack by one stageSnow           | Freezes targetTall grass     | Puts target to sleepIn Pokémon Battle Revolution:Terrain        | Effect-------------- | -------------------------------------------------------------Courtyard      | Paralyzes targetCrystal        | Makes target flinchGateway        | Lowers target's Attack by one stageMagma          | Makes target flinchMain Street    | Paralyzes targetNeon           | Paralyzes targetStargazer      | Makes target flinchSunny Park     | Puts target to sleepSunset         | Lowers target's accuracy by one stageWaterfall      | Puts target to sleep" ;
+  <name> "secret-power" ;
+  <power> 70 ;
+  <pp> 20 ;
+  <moveType> <Normal> .
+
+<Snore> a <Move> ;
+  <accuracy> 100 ;
+  <effect> "Only usable if the user is sleeping.  Inflicts regular damage.  Has a $effect_chance% chance to make the target flinch." ;
+  <name> "snore" ;
+  <power> 50 ;
+  <pp> 15 ;
+  <moveType> <Normal> .
+
+<Solar-beam> a <Move> ;
+  <accuracy> 100 ;
+  <effect> "Inflicts regular damage.  User charges for one turn before attacking.During sunny day, the charge turn is skipped.During hail, rain dance, or sandstorm, power is halved.This move cannot be selected by sleep talk." ;
+  <name> "solar-beam" ;
+  <power> 120 ;
+  <pp> 10 ;
+  <moveType> <Grass> .
+  <Thunder> a <Move> ;
+  <accuracy> 70 ;
+  <effect> "Inflicts regular damage.  Has a $effect_chance% chance to paralyze the target.During rain dance, this move has 100% accuracy.  It also has a (100 - accuracy)% chance to break through the protection of protect and detect.During sunny day, this move has 50% accuracy." ;
+  <name> "thunder" ;
+  <power> 110 ;
+  <pp> 10 ;
+  <moveType> <Electric> .
+
+<Thunder-punch> a <Move> ;
+  <accuracy> 100 ;
+  <effect> "Inflicts regular damage.  Has a $effect_chance% chance to paralyze the target." ;
+  <name> "thunder-punch" ;
+  <power> 75 ;
+  <pp> 15 ;
+  <moveType> <Electric> .
+
+<Thunder-shock> a <Move> ;
+  <accuracy> 100 ;
+  <effect> "Inflicts regular damage.  Has a $effect_chance% chance to paralyze the target." ;
+  <name> "thunder-shock" ;
+  <power> 40 ;
+  <pp> 30 ;
+  <moveType> <Electric> .
+
+<Thunderbolt> a <Move> ;
+  <accuracy> 100 ;
+  <effect> "Inflicts regular damage.  Has a $effect_chance% chance to paralyze the target." ;
+  <name> "thunderbolt" ;
+  <power> 90 ;
+  <pp> 15 ;
+  <moveType> <Electric> .
+  
+  
+<Uproar> a <Move> ;
+  <accuracy> 100 ;
+  <effect> "Inflicts regular damage.  User is forced to use this move for 2–5 turns, selected at random.  All Pokémon on the field wake up, and none can fall to sleep until the lock-in ends.Pokémon cannot use rest during this effect.This move cannot be selected by sleep talk." ;
+  <name> "uproar" ;
+  <power> 90 ;
+  <pp> 10 ;
+  <moveType> <Normal> .
+
+
+<Water-spout> a <Move> ;
+  <accuracy> 100 ;
+  <effect> "Inflicts regular damage.  Power increases with the user's remaining HP and is given by `150 * HP / max HP`, to a maximum of 150 when the user has full HP." ;
+  <name> "water-spout" ;
+  <power> 150 ;
+  <pp> 5 ;
+  <moveType> <Water> .
+
+
+###Ability
+
+<Blaze> a <Ability> ;
+  <name> "blaze" .
+
+<Lightning-rod> a <Ability> ;
+  <name> "lightning-rod" .
+
+<Overgrow> a <Ability> ;
+  <name> "overgrow" .
+
+<Pickup> a <Ability> ;
+  <name> "pickup" .
+
+<Rain-dish> a <Ability> ;
+  <name> "rain-dish" .
+
+<Solar-power> a <Ability> ;
+  <name> "solar-power" .
+  
+<Static> a <Ability> ;
+  <name> "static" .
+
+
+<Torrent> a <Ability> ;
+  <name> "torrent" .
+
