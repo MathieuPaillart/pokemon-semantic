@@ -10,76 +10,71 @@
   <hasWeakness> <Fire> ;
   <hasWeakness> <Flying> ;
   <hasWeakness> <Rock> ;
-  <name> "Bug" .
-  
+  <name> "Bug"^^xsd:string.
   
 <Rock> a <Type> ;
   <hasWeakness> <Water> ;
-  <name> "Rock" .
+  <name> "Rock"^^xsd:string.
 
 <Water> a <Type> ;
   <hasWeakness> <Electric> ;
   <hasWeakness> <Grass> ;
-  <name> "Water".
+  <name> "Water"^^xsd:string.
 
 <Poison> a <Type> ;
   <hasWeakness> <Ground> ;
   <hasWeakness> <Psychic> ;
-  <name> "Poison" .
+  <name> "Poison"^^xsd:string.
 
 <Psychic> a <Type> ;
   <hasWeakness> <Bug> ;
   <hasWeakness> <Dragon> ;
-  <name> "Psychic" .
+  <name> "Psychic"^^xsd:string.
 
 <Normal> a <Type> ;
   <hasWeakness> <Fight> ;
-  <name> "Normal" .
+  <name> "Normal"^^xsd:string.
   
   <Ground> a <Type> ;
   <hasWeakness> <Grass> ;
   <hasWeakness> <Water> ;
-  <name> "Ground" .
+  <name> "Ground"^^xsd:string.
 
 <Grass> a <Type> ;
   <hasWeakness> <Bug> ;
   <hasWeakness> <Fire> ;
   <hasWeakness> <Flying> ;
   <hasWeakness> <Poison> ;
-  <name> "Grass".
+  <name> "Grass"^^xsd:string.
   
 <Dragon> a <Type> ;
   <hasWeakness> <Dragon> ;
-  <name> "Dragon" .
+  <name> "Dragon"^^xsd:string.
 
 
 <Electric> a <Type> ;
   <hasWeakness> <Ground> ;
-  <name> "Electric".
+  <name> "Electric"^^xsd:string.
   
  
 <Fight> a <Type> ;
   <hasWeakness> <Flying> ;
   <hasWeakness> <Psychic> ;
-  <name> "Fight" .
+  <name> "Fight"^^xsd:string.
 
 <Fire> a <Type> ;
   <hasWeakness> <Ground> ;
   <hasWeakness> <Rock> ;
   <hasWeakness> <Water> ;
-  <name> "Fire".
+  <name> "Fire"^^xsd:string.
   
   
 <Flying> a <Type> ;
   <hasWeakness> <Electric> ;
   <hasWeakness> <Rock> ;
-  <name> "Flying" .
-
-
+  <name> "Flying"^^xsd:string.
 
 ###Trainer
-
-
 
 <Sacha> a <Person> ;
   <age> 21 ;
@@ -105,7 +100,6 @@
 
 ###Pokemon
 
-
 <Meowth> a <Pokemon> ;
   <baseExperience> 58 ;
   <hasAbility> <Pickup> ;
@@ -115,10 +109,10 @@
   <hasMove> <Uproar> ;
   <hasType> <Normal> ;
   <height> 4 ;
-  <hp> "60" ;
-  <imageLink> "https://images.pokemontcg.io/xy11/88.png" ;
+  <hp> "60"^^xsd:string;
+  <imageLink> "https://images.pokemontcg.io/xy11/88.png"^^xsd:string;
   <isCaptured> true ;
-  <name> "meowth" ;
+  <name> "meowth"^^xsd:string;
   <nationalPokedexNumber> 52 ;
   <weight> 42 ;
   <wikipediaLink> <http://en.wikipedia.org/wiki/Meowth> .
@@ -132,15 +126,13 @@
   <hasMove> <Earthquake> ;
   <hasType> <Water> ;
   <height> 16 ;
-  <hp> "180" ;
-  <imageLink> "https://images.pokemontcg.io/xyp/XY122.png" ;
+  <hp> "180"^^xsd:string;
+  <imageLink> "https://images.pokemontcg.io/xyp/XY122.png"^^xsd:string;
   <isWild> true ;
-  <name> "blastoise" ;
+  <name> "blastoise"^^xsd:string;
   <nationalPokedexNumber> 9 ;
   <weight> 855 ;
   <wikipediaLink> <http://en.wikipedia.org/wiki/Blastoise> .
-
-
 
 <Bulbasaur> a <Pokemon> ;
   <baseExperience> 64 ;
@@ -153,10 +145,10 @@
   <hasType> <Grass> ;
   <hasType> <Poison> ;
   <height> 7 ;
-  <hp> "50" ;
-  <imageLink> "https://images.pokemontcg.io/ex6/55.png" ;
+  <hp> "50"^^xsd:string;
+  <imageLink> "https://images.pokemontcg.io/ex6/55.png"^^xsd:string;
   <isWild> true ;
-  <name> "bulbasaur" ;
+  <name> "bulbasaur"^^xsd:string;
   <nationalPokedexNumber> 1 ;
   <weight> 69 ;
   <wikipediaLink> <http://en.wikipedia.org/wiki/Bulbasaur> .
@@ -171,10 +163,10 @@
   <hasType> <Fire> ;
   <hasType> <Flying> ;
   <height> 17 ;
-  <hp> "120" ;
-  <imageLink> "https://images.pokemontcg.io/ex3/100.png" ;
+  <hp> "120"^^xsd:string;
+  <imageLink> "https://images.pokemontcg.io/ex3/100.png"^^xsd:string;
   <isCaptured> true ;
-  <name> "charizard" ;
+  <name> "charizard"^^xsd:string;
   <nationalPokedexNumber> 6 ;
   <weight> 905 ;
   <wikipediaLink> <http://en.wikipedia.org/wiki/Charizard> .
@@ -191,11 +183,11 @@
   <hasNextEvolution> <Reptincel> ;
   <hasType> <Fire> ;
   <height> 6 ;
-  <hp> "60" ;
-  <imageLink> "https://images.pokemontcg.io/det1/4.png" ;
+  <hp> "60"^^xsd:string;
+  <imageLink> "https://images.pokemontcg.io/det1/4.png"^^xsd:string;
   <isCaptured> true ;
   <isWild> false ;
-  <name> "charmander" ;
+  <name> "charmander"^^xsd:string;
   <nationalPokedexNumber> 4 ;
   <weight> 85 ;
   <wikipediaLink> <http://en.wikipedia.org/wiki/Charmander> .
@@ -209,15 +201,13 @@
   <hasNextEvolution> <Dracofeu> ;
   <hasType> <Fire> ;
   <height> 11 ;
-  <hp> "70" ;
-  <imageLink> "https://images.pokemontcg.io/ex3/99.png" ;
+  <hp> "70"^^xsd:string;
+  <imageLink> "https://images.pokemontcg.io/ex3/99.png"^^xsd:string;
   <isWild> true ;
-  <name> "charmeleon" ;
+  <name> "charmeleon"^^xsd:string;
   <nationalPokedexNumber> 5 ;
   <weight> 190 ;
-  <wikipediaLink> <http://en.wikipedia.org/wiki/Charmeleon> .
-  
-  
+  <wikipediaLink> <http://en.wikipedia.org/wiki/Charmeleon> . 
 
 <Ivysaur> a <Pokemon> ;
   <baseExperience> 142 ;
@@ -228,14 +218,13 @@
   <hasType> <Grass> ;
   <hasType> <Poison> ;
   <height> 10 ;
-  <hp> "80" ;
-  <imageLink> "https://images.pokemontcg.io/ex6/35.png" ;
+  <hp> "80"^^xsd:string;
+  <imageLink> "https://images.pokemontcg.io/ex6/35.png"^^xsd:string;
   <isWild> true ;
-  <name> "ivysaur" ;
+  <name> "ivysaur"^^xsd:string;
   <nationalPokedexNumber> 2 ;
   <weight> 130 ;
   <wikipediaLink> <http://en.wikipedia.org/wiki/Ivysaur> .
-
 
 <Squirtle> a <Pokemon> ;
   <baseExperience> 63 ;
@@ -251,14 +240,13 @@
   <hasNextEvolution> <Wartortle> ;
   <hasType> <Water> ;
   <height> 5 ;
-  <hp> "60" ;
-  <imageLink> "https://images.pokemontcg.io/sm10/33.png" ;
+  <hp> "60"^^xsd:string;
+  <imageLink> "https://images.pokemontcg.io/sm10/33.png"^^xsd:string;
   <isWild> true ;
-  <name> "squirtle" ;
+  <name> "squirtle"^^xsd:string;
   <nationalPokedexNumber> 7 ;
   <weight> 90 ;
   <wikipediaLink> <http://en.wikipedia.org/wiki/Squirtle> .
-
 
 <Pikachu> a <Pokemon> ;
   <baseExperience> 112 ;
@@ -273,10 +261,10 @@
   <hasTrainer> <Florian> ;
   <hasType> <Electric> ;
   <height> 4 ;
-  <hp> "130" ;
-  <imageLink> "https://images.pokemontcg.io/xyp/XY174.png" ;
+  <hp> "130"^^xsd:string;
+  <imageLink> "https://images.pokemontcg.io/xyp/XY174.png"^^xsd:string;
   <isCaptured> true ;
-  <name> "pikachu" ;
+  <name> "pikachu"^^xsd:string;
   <nationalPokedexNumber> 25 ;
   <weight> 60 ;
   <wikipediaLink> <http://en.wikipedia.org/wiki/Pikachu> .
@@ -292,10 +280,10 @@
   <hasMove> <Thunder-punch> ;
   <hasType> <Electric> ;
   <height> 8 ;
-  <hp> "100" ;
-  <imageLink> "https://images.pokemontcg.io/hgss3/83.png" ;
+  <hp> "100"^^xsd:string;
+  <imageLink> "https://images.pokemontcg.io/hgss3/83.png"^^xsd:string;
   <isWild> true ;
-  <name> "raichu" ;
+  <name> "raichu"^^xsd:string;
   <nationalPokedexNumber> 26 ;
   <weight> 300 ;
   <wikipediaLink> <http://en.wikipedia.org/wiki/Raichu> .
@@ -309,10 +297,10 @@
   <hasType> <Grass> ;
   <hasType> <Poison> ;
   <height> 20 ;
-  <hp> "140" ;
-  <imageLink> "https://images.pokemontcg.io/bw5/3.png" ;
+  <hp> "140"^^xsd:string;
+  <imageLink> "https://images.pokemontcg.io/bw5/3.png"^^xsd:string;
   <isWild> true ;
-  <name> "venusaur" ;
+  <name> "venusaur"^^xsd:string;
   <nationalPokedexNumber> 3 ;
   <weight> 1000 ;
   <wikipediaLink> <http://en.wikipedia.org/wiki/Venusaur> .
@@ -325,10 +313,10 @@
   <hasNextEvolution> <Blastoise> ;
   <hasType> <Water> ;
   <height> 10 ;
-  <hp> "80" ;
-  <imageLink> "https://images.pokemontcg.io/hgss2/42.png" ;
+  <hp> "80"^^xsd:string;
+  <imageLink> "https://images.pokemontcg.io/hgss2/42.png"^^xsd:string;
   <isWild> true ;
-  <name> "wartortle" ;
+  <name> "wartortle"^^xsd:string;
   <nationalPokedexNumber> 8 ;
   <weight> 225 ;
   <wikipediaLink> <http://en.wikipedia.org/wiki/Wartortle> .
@@ -337,30 +325,30 @@
   <hasGender> <Male> ;
   <hasType> <Poison> ;
   <isWild> true ;
-  <name> "weezing" .
+  <name> "weezing"^^xsd:string.
 
 <Wobbuffet> a <Pokemon> ;
   <hasGender> <Male> ;
   <hasTrainer> <Ondine> ;
   <hasType> <Psychic> ;
   <isCaptured> true ;
-  <name> "wobbuffet" .
+  <name> "wobbuffet"^^xsd:string.
 
 
 ###Move
 
 <Aqua-tail> a <Move> ;
   <accuracy> 90 ;
-  <effect> "Inflicts regular damage." ;
-  <name> "aqua-tail" ;
+  <effect> "Inflicts regular damage."^^xsd:string;
+  <name> "aqua-tail"^^xsd:string;
   <power> 90 ;
   <pp> 10 ;
   <moveType> <Water> .
   
   <Brick-break> a <Move> ;
   <accuracy> 100 ;
-  <effect> "Destroys any light screen or reflect on the target's side of the field, then inflicts regular damage." ;
-  <name> "brick-break" ;
+  <effect> "Destroys any light screen or reflect on the target's side of the field, then inflicts regular damage."^^xsd:string;
+  <name> "brick-break"^^xsd:string;
   <power> 75 ;
   <pp> 15 ;
   <moveType> <Fighting> .
@@ -368,24 +356,24 @@
   
 <Confusion> a <Move> ;
   <accuracy> 100 ;
-  <effect> "Inflicts regular damage.  Has a $effect_chance% chance to confuse the target." ;
-  <name> "confusion" ;
+  <effect> "Inflicts regular damage.  Has a $effect_chance% chance to confuse the target."^^xsd:string;
+  <name> "confusion"^^xsd:string;
   <power> 50 ;
   <pp> 25 ;
   <moveType> <Psychic> .
 
 <Dig> a <Move> ;
   <accuracy> 100 ;
-  <effect> "Inflicts regular damage.  User digs underground for one turn, becoming immune to attack, and hits on the second turn.During the immune turn, earthquake, fissure, and magnitude still hit the user normally, and their power is doubled if appropriate.The user may be hit during its immune turn if under the effect of lock on, mind reader, or no guard.This move cannot be selected by sleep talk." ;
-  <name> "dig" ;
+  <effect> "Inflicts regular damage.  User digs underground for one turn, becoming immune to attack, and hits on the second turn.During the immune turn, earthquake, fissure, and magnitude still hit the user normally, and their power is doubled if appropriate.The user may be hit during its immune turn if under the effect of lock on, mind reader, or no guard.This move cannot be selected by sleep talk."^^xsd:string;
+  <name> "dig"^^xsd:string;
   <power> 80 ;
   <pp> 10 ;
   <moveType> <Ground> .
 
 <Dive> a <Move> ;
   <accuracy> 100 ;
-  <effect> "Inflicts regular damage.  User dives underwater for one turn, becoming immune to attack, and hits on the second turn.During the immune turn, surf, and whirlpool still hit the user normally, and their power is doubled if appropriate.The user may be hit during its immune turn if under the effect of lock on, mind reader, or no guard.This move cannot be selected by sleep talk." ;
-  <name> "dive" ;
+  <effect> "Inflicts regular damage.  User dives underwater for one turn, becoming immune to attack, and hits on the second turn.During the immune turn, surf, and whirlpool still hit the user normally, and their power is doubled if appropriate.The user may be hit during its immune turn if under the effect of lock on, mind reader, or no guard.This move cannot be selected by sleep talk."^^xsd:string;
+  <name> "dive"^^xsd:string;
   <power> 80 ;
   <pp> 10 ;
   <moveType> <Water> .
@@ -393,16 +381,16 @@
 
 <Dynamic-punch> a <Move> ;
   <accuracy> 50 ;
-  <effect> "Inflicts regular damage.  Has a $effect_chance% chance to confuse the target." ;
-  <name> "dynamic-punch" ;
+  <effect> "Inflicts regular damage.  Has a $effect_chance% chance to confuse the target."^^xsd:string;
+  <name> "dynamic-punch"^^xsd:string;
   <power> 100 ;
   <pp> 5 ;
   <moveType> <Fighting> .
 
 <Earthquake> a <Move> ;
   <accuracy> 100 ;
-  <effect> "Inflicts regular damage.If the target is in the first turn of dig, this move will hit with double power." ;
-  <name> "earthquake" ;
+  <effect> "Inflicts regular damage.If the target is in the first turn of dig, this move will hit with double power."^^xsd:string;
+  <name> "earthquake"^^xsd:string;
   <power> 100 ;
   <pp> 10 ;
   <moveType> <Ground> .
@@ -410,40 +398,40 @@
 
 <Facade> a <Move> ;
   <accuracy> 100 ;
-  <effect> "Inflicts regular damage.  If the user is burned, paralyzed, or poisoned, this move has double power." ;
-  <name> "facade" ;
+  <effect> "Inflicts regular damage.  If the user is burned, paralyzed, or poisoned, this move has double power."^^xsd:string;
+  <name> "facade"^^xsd:string;
   <power> 70 ;
   <pp> 20 ;
   <moveType> <Normal> .
 
 <Fake-out> a <Move> ;
   <accuracy> 100 ;
-  <effect> "Inflicts regular damage.  Causes the target to flinch.  Can only be used on the user's first turn after entering the field." ;
-  <name> "fake-out" ;
+  <effect> "Inflicts regular damage.  Causes the target to flinch.  Can only be used on the user's first turn after entering the field."^^xsd:string;
+  <name> "fake-out"^^xsd:string;
   <power> 40 ;
   <pp> 10 ;
   <moveType> <Normal> .
   
 <Flame-burst> a <Move> ;
   <accuracy> 100 ;
-  <effect> "Inflicts regular damage.  If this move successfully hits the target, any Pokémon adjacent to the target are damaged for 1/16 their max HP." ;
-  <name> "flame-burst" ;
+  <effect> "Inflicts regular damage.  If this move successfully hits the target, any Pokémon adjacent to the target are damaged for 1/16 their max HP."^^xsd:string;
+  <name> "flame-burst"^^xsd:string;
   <power> 70 ;
   <pp> 15 ;
   <moveType> <Fire> .
 
 <Flame-charge> a <Move> ;
   <accuracy> 100 ;
-  <effect> "Inflicts regular damage.  Raises the user's Speed by one stage." ;
-  <name> "flame-charge" ;
+  <effect> "Inflicts regular damage.  Raises the user's Speed by one stage."^^xsd:string;
+  <name> "flame-charge"^^xsd:string;
   <power> 50 ;
   <pp> 20 ;
   <moveType> <Fire> .
   
 <Focus-punch> a <Move> ;
   <accuracy> 100 ;
-  <effect> "Inflicts regular damage.  If the user takes damage this turn before hitting, this move will fail.This move cannot be copied by mirror move, nor selected by assist, metronome, or sleep talk." ;
-  <name> "focus-punch" ;
+  <effect> "Inflicts regular damage.  If the user takes damage this turn before hitting, this move will fail.This move cannot be copied by mirror move, nor selected by assist, metronome, or sleep talk."^^xsd:string;
+  <name> "focus-punch"^^xsd:string;
   <power> 150 ;
   <pp> 20 ;
   <moveType> <Fighting> .
@@ -451,8 +439,8 @@
   
 <Grass-pledge> a <Move> ;
   <accuracy> 100 ;
-  <effect> "Inflicts regular damage.  If a friendly Pokémon used fire pledge earlier this turn, all opposing Pokémon will take 1/8 their max HP in damage at the end of every turn for four turns (including this one)." ;
-  <name> "grass-pledge" ;
+  <effect> "Inflicts regular damage.  If a friendly Pokémon used fire pledge earlier this turn, all opposing Pokémon will take 1/8 their max HP in damage at the end of every turn for four turns (including this one)."^^xsd:string;
+  <name> "grass-pledge"^^xsd:string;
   <power> 80 ;
   <pp> 10 ;
   <moveType> <Grass> .
@@ -460,16 +448,16 @@
 
 <Hyper-beam> a <Move> ;
   <accuracy> 90 ;
-  <effect> "Inflicts regular damage.  User loses its next turn to \"recharge\", and cannot attack or switch out during that turn." ;
-  <name> "hyper-beam" ;
+  <effect> "Inflicts regular damage.  User loses its next turn to \"recharge\", and cannot attack or switch out during that turn."^^xsd:string;
+  <name> "hyper-beam"^^xsd:string;
   <power> 150 ;
   <pp> 5 ;
   <moveType> <Normal> .
   
 <Muddy-water> a <Move> ;
   <accuracy> 85 ;
-  <effect> "Inflicts regular damage.  Has a $effect_chance% chance to lower the target's accuracy by one stage." ;
-  <name> "muddy-water" ;
+  <effect> "Inflicts regular damage.  Has a $effect_chance% chance to lower the target's accuracy by one stage."^^xsd:string;
+  <name> "muddy-water"^^xsd:string;
   <power> 90 ;
   <pp> 10 ;
   <moveType> <Water> .
@@ -477,24 +465,24 @@
   
 <Quick-attack> a <Move> ;
   <accuracy> 100 ;
-  <effect> "Inflicts regular damage." ;
-  <name> "quick-attack" ;
+  <effect> "Inflicts regular damage."^^xsd:string;
+  <name> "quick-attack"^^xsd:string;
   <power> 40 ;
   <pp> 30 ;
   <moveType> <Normal> .
 
 <Rage> a <Move> ;
   <accuracy> 100 ;
-  <effect> "Inflicts regular damage.  Every time the user is hit after it uses this move but before its next action, its Attack raises by one stage." ;
-  <name> "rage" ;
+  <effect> "Inflicts regular damage.  Every time the user is hit after it uses this move but before its next action, its Attack raises by one stage."^^xsd:string;
+  <name> "rage"^^xsd:string;
   <power> 20 ;
   <pp> 20 ;
   <moveType> <Normal> .
   
   <Razor-leaf> a <Move> ;
   <accuracy> 95 ;
-  <effect> "Inflicts regular damage.  User's critical hit rate is one level higher when using this move." ;
-  <name> "razor-leaf" ;
+  <effect> "Inflicts regular damage.  User's critical hit rate is one level higher when using this move."^^xsd:string;
+  <name> "razor-leaf"^^xsd:string;
   <power> 55 ;
   <pp> 25 ;
   <moveType> <Grass> .
@@ -502,55 +490,55 @@
   
 <Secret-power> a <Move> ;
   <accuracy> 100 ;
-  <effect> "Inflicts regular damage.  Has a $effect_chance% chance to inflict an effect chosen according to the terrain.Terrain        | Effect-------------- | -------------------------------------------------------------Building       | Paralyzes targetCave           | Makes target flinchDeep water     | Lowers target's Attack by one stageDesert         | Lowers target's accuracy by one stageGrass          | Puts target to sleepMountain       | Makes target flinchRoad           | Lowers target's accuracy by one stageShallow water  | Lowers target's Attack by one stageSnow           | Freezes targetTall grass     | Puts target to sleepIn Pokémon Battle Revolution:Terrain        | Effect-------------- | -------------------------------------------------------------Courtyard      | Paralyzes targetCrystal        | Makes target flinchGateway        | Lowers target's Attack by one stageMagma          | Makes target flinchMain Street    | Paralyzes targetNeon           | Paralyzes targetStargazer      | Makes target flinchSunny Park     | Puts target to sleepSunset         | Lowers target's accuracy by one stageWaterfall      | Puts target to sleep" ;
-  <name> "secret-power" ;
+  <effect> "Inflicts regular damage.  Has a $effect_chance% chance to inflict an effect chosen according to the terrain.Terrain        | Effect-------------- | -------------------------------------------------------------Building       | Paralyzes targetCave           | Makes target flinchDeep water     | Lowers target's Attack by one stageDesert         | Lowers target's accuracy by one stageGrass          | Puts target to sleepMountain       | Makes target flinchRoad           | Lowers target's accuracy by one stageShallow water  | Lowers target's Attack by one stageSnow           | Freezes targetTall grass     | Puts target to sleepIn Pokémon Battle Revolution:Terrain        | Effect-------------- | -------------------------------------------------------------Courtyard      | Paralyzes targetCrystal        | Makes target flinchGateway        | Lowers target's Attack by one stageMagma          | Makes target flinchMain Street    | Paralyzes targetNeon           | Paralyzes targetStargazer      | Makes target flinchSunny Park     | Puts target to sleepSunset         | Lowers target's accuracy by one stageWaterfall      | Puts target to sleep"^^xsd:string;
+  <name> "secret-power"^^xsd:string;
   <power> 70 ;
   <pp> 20 ;
   <moveType> <Normal> .
 
 <Snore> a <Move> ;
   <accuracy> 100 ;
-  <effect> "Only usable if the user is sleeping.  Inflicts regular damage.  Has a $effect_chance% chance to make the target flinch." ;
-  <name> "snore" ;
+  <effect> "Only usable if the user is sleeping.  Inflicts regular damage.  Has a $effect_chance% chance to make the target flinch."^^xsd:string;
+  <name> "snore"^^xsd:string;
   <power> 50 ;
   <pp> 15 ;
   <moveType> <Normal> .
 
 <Solar-beam> a <Move> ;
   <accuracy> 100 ;
-  <effect> "Inflicts regular damage.  User charges for one turn before attacking.During sunny day, the charge turn is skipped.During hail, rain dance, or sandstorm, power is halved.This move cannot be selected by sleep talk." ;
-  <name> "solar-beam" ;
+  <effect> "Inflicts regular damage.  User charges for one turn before attacking.During sunny day, the charge turn is skipped.During hail, rain dance, or sandstorm, power is halved.This move cannot be selected by sleep talk."^^xsd:string;
+  <name> "solar-beam"^^xsd:string;
   <power> 120 ;
   <pp> 10 ;
   <moveType> <Grass> .
   <Thunder> a <Move> ;
   <accuracy> 70 ;
-  <effect> "Inflicts regular damage.  Has a $effect_chance% chance to paralyze the target.During rain dance, this move has 100% accuracy.  It also has a (100 - accuracy)% chance to break through the protection of protect and detect.During sunny day, this move has 50% accuracy." ;
-  <name> "thunder" ;
+  <effect> "Inflicts regular damage.  Has a $effect_chance% chance to paralyze the target.During rain dance, this move has 100% accuracy.  It also has a (100 - accuracy)% chance to break through the protection of protect and detect.During sunny day, this move has 50% accuracy."^^xsd:string;
+  <name> "thunder"^^xsd:string;
   <power> 110 ;
   <pp> 10 ;
   <moveType> <Electric> .
 
 <Thunder-punch> a <Move> ;
   <accuracy> 100 ;
-  <effect> "Inflicts regular damage.  Has a $effect_chance% chance to paralyze the target." ;
-  <name> "thunder-punch" ;
+  <effect> "Inflicts regular damage.  Has a $effect_chance% chance to paralyze the target."^^xsd:string;
+  <name> "thunder-punch"^^xsd:string;
   <power> 75 ;
   <pp> 15 ;
   <moveType> <Electric> .
 
 <Thunder-shock> a <Move> ;
   <accuracy> 100 ;
-  <effect> "Inflicts regular damage.  Has a $effect_chance% chance to paralyze the target." ;
-  <name> "thunder-shock" ;
+  <effect> "Inflicts regular damage.  Has a $effect_chance% chance to paralyze the target."^^xsd:string;
+  <name> "thunder-shock"^^xsd:string;
   <power> 40 ;
   <pp> 30 ;
   <moveType> <Electric> .
 
 <Thunderbolt> a <Move> ;
   <accuracy> 100 ;
-  <effect> "Inflicts regular damage.  Has a $effect_chance% chance to paralyze the target." ;
-  <name> "thunderbolt" ;
+  <effect> "Inflicts regular damage.  Has a $effect_chance% chance to paralyze the target."^^xsd:string;
+  <name> "thunderbolt"^^xsd:string;
   <power> 90 ;
   <pp> 15 ;
   <moveType> <Electric> .
@@ -558,8 +546,8 @@
   
 <Uproar> a <Move> ;
   <accuracy> 100 ;
-  <effect> "Inflicts regular damage.  User is forced to use this move for 2–5 turns, selected at random.  All Pokémon on the field wake up, and none can fall to sleep until the lock-in ends.Pokémon cannot use rest during this effect.This move cannot be selected by sleep talk." ;
-  <name> "uproar" ;
+  <effect> "Inflicts regular damage.  User is forced to use this move for 2–5 turns, selected at random.  All Pokémon on the field wake up, and none can fall to sleep until the lock-in ends.Pokémon cannot use rest during this effect.This move cannot be selected by sleep talk."^^xsd:string;
+  <name> "uproar"^^xsd:string;
   <power> 90 ;
   <pp> 10 ;
   <moveType> <Normal> .
@@ -567,8 +555,8 @@
 
 <Water-spout> a <Move> ;
   <accuracy> 100 ;
-  <effect> "Inflicts regular damage.  Power increases with the user's remaining HP and is given by `150 * HP / max HP`, to a maximum of 150 when the user has full HP." ;
-  <name> "water-spout" ;
+  <effect> "Inflicts regular damage.  Power increases with the user's remaining HP and is given by `150 * HP / max HP`, to a maximum of 150 when the user has full HP."^^xsd:string;
+  <name> "water-spout"^^xsd:string;
   <power> 150 ;
   <pp> 5 ;
   <moveType> <Water> .
@@ -577,27 +565,27 @@
 ###Ability
 
 <Blaze> a <Ability> ;
-  <name> "blaze" .
+  <name> "blaze"^^xsd:string.
 
 <Lightning-rod> a <Ability> ;
-  <name> "lightning-rod" .
+  <name> "lightning-rod"^^xsd:string.
 
 <Overgrow> a <Ability> ;
-  <name> "overgrow" .
+  <name> "overgrow"^^xsd:string.
 
 <Pickup> a <Ability> ;
-  <name> "pickup" .
+  <name> "pickup"^^xsd:string.
 
 <Rain-dish> a <Ability> ;
-  <name> "rain-dish" .
+  <name> "rain-dish"^^xsd:string.
 
 <Solar-power> a <Ability> ;
-  <name> "solar-power" .
+  <name> "solar-power"^^xsd:string.
   
 <Static> a <Ability> ;
-  <name> "static" .
+  <name> "static"^^xsd:string.
 
 
 <Torrent> a <Ability> ;
-  <name> "torrent" .
+  <name> "torrent"^^xsd:string.
 
