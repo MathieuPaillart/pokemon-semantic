@@ -1,0 +1,10 @@
+prefix schema: <http://schema.org/>.
+prefix pok: <http://www.polytech.fr/>.
+select *
+WHERE{
+	bind (uri(concat("http://localhost/sparql-ms/pokeapi/findPokemon/?keyword=", "charizard")) as ?pokeapi)
+	SERVICE ?pokeapi
+	{	?PokeExp schema:baseExperience ?baseExperience .}
+
+
+}

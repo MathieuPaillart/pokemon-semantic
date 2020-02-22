@@ -1,0 +1,15 @@
+prefix schema: <http://schema.org/>.
+prefix pok: <http://www.polytech.fr/>.
+SELECT *
+WHERE{
+bind (uri(concat("http://localhost/sparql-ms/pokemontcg/findCards/?keyword=", "pikachu"))  as ?pokemontcg)
+
+	SERVICE ?pokemontcg
+	{	?pokedexNumber schema:nationalPokedexNumber ?nationalPokedexNumber. ?pokemon schema:name ?nameupp.}
+BIND(IRI(CONCAT("http://dbpedia.org/resource/", concat(UCASE(substr("pikachu", 1,1)),substr("pikachu",2)))) as ?name_url)
+  service <http://dbpedia.org/sparql/> {
+     select ?isPrimaryTopicOf ?name_url where {
+       ?name_url foaf:isPrimaryTopicOf ?isPrimaryTopicOf
+     }
+}
+}

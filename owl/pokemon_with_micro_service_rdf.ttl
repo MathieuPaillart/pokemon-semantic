@@ -1,0 +1,261 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://www.polytech.fr/Blastoise> a <http://www.polytech.fr/Pokemon> ;
+  <http://www.polytech.fr/baseExperience> 239 ;
+  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Male> ;
+  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Water> ;
+  <http://www.polytech.fr/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Blastoise> ;
+  <http://www.polytech.fr/isWild> false ;
+  <http://www.polytech.fr/name> "blastoise" ;
+  <http://www.polytech.fr/nationalPokedexNumber> 9 .
+
+<http://www.polytech.fr/Bug> a <http://www.polytech.fr/Type> ;
+  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Fire> ;
+  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Flying> ;
+  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Rock> ;
+  <http://www.polytech.fr/name> "Bug" .
+
+<http://www.polytech.fr/Bulbasaur> a <http://www.polytech.fr/Pokemon> ;
+  <http://www.polytech.fr/baseExperience> 64 ;
+  <http://www.polytech.fr/hasEnemy> <http://www.polytech.fr/Weezing> ;
+  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Male> ;
+  <http://www.polytech.fr/hasNextEvolution> <http://www.polytech.fr/Ivysaur> ;
+  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Grass> ;
+  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Poison> ;
+  <http://www.polytech.fr/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Bulbasaur> ;
+  <http://www.polytech.fr/isWild> false ;
+  <http://www.polytech.fr/name> "bulbasaur" ;
+  <http://www.polytech.fr/nationalPokedexNumber> 1 .
+
+<http://www.polytech.fr/Charizard> a <http://www.polytech.fr/Pokemon> ;
+  <http://www.polytech.fr/baseExperience> 240 ;
+  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Female> ;
+  <http://www.polytech.fr/hasTrainer> <http://www.polytech.fr/Jenny> ;
+  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Fire> ;
+  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Flying> ;
+  <http://www.polytech.fr/isCaptured> true ;
+  <http://www.polytech.fr/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Charizard> ;
+  <http://www.polytech.fr/name> "charizard" ;
+  <http://www.polytech.fr/nationalPokedexNumber> 6 .
+
+<http://www.polytech.fr/Charmander> a <http://www.polytech.fr/Pokemon> ;
+  <http://www.polytech.fr/baseExperience> 62 ;
+  <http://www.polytech.fr/hasEnemy> <http://www.polytech.fr/Weezing> ;
+  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Female> ;
+  <http://www.polytech.fr/hasNextEvolution> <http://www.polytech.fr/Charmeleon> ;
+  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Fire> ;
+  <http://www.polytech.fr/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Charmander> ;
+  <http://www.polytech.fr/isWild> false ;
+  <http://www.polytech.fr/name> "charmander" ;
+  <http://www.polytech.fr/nationalPokedexNumber> 4 .
+
+<http://www.polytech.fr/Charmeleon> a <http://www.polytech.fr/Pokemon> ;
+  <http://www.polytech.fr/baseExperience> 142 ;
+  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Female> ;
+  <http://www.polytech.fr/hasNextEvolution> <http://www.polytech.fr/Charizard> ;
+  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Fire> ;
+  <http://www.polytech.fr/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Charmeleon> ;
+  <http://www.polytech.fr/isWild> false ;
+  <http://www.polytech.fr/name> "charmeleon" ;
+  <http://www.polytech.fr/nationalPokedexNumber> 5 .
+
+<http://www.polytech.fr/Dragon> a <http://www.polytech.fr/Type> ;
+  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Dragon> ;
+  <http://www.polytech.fr/name> "Dragon" .
+
+<http://www.polytech.fr/Electric> a <http://www.polytech.fr/Type> ;
+  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Ground> ;
+  <http://www.polytech.fr/name> "Electric" .
+
+<http://www.polytech.fr/Fight> a <http://www.polytech.fr/Type> ;
+  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Flying> ;
+  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Psychic> ;
+  <http://www.polytech.fr/name> "Fight" .
+
+<http://www.polytech.fr/Fire> a <http://www.polytech.fr/Type> ;
+  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Ground> ;
+  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Rock> ;
+  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Water> ;
+  <http://www.polytech.fr/name> "Fire" .
+
+<http://www.polytech.fr/Florian> a <http://www.polytech.fr/Trainer> ;
+  <http://www.polytech.fr/age> 23 ;
+  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Male> .
+
+<http://www.polytech.fr/Flying> a <http://www.polytech.fr/Type> ;
+  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Electric> ;
+  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Rock> ;
+  <http://www.polytech.fr/name> "Flying" .
+
+<http://www.polytech.fr/Grass> a <http://www.polytech.fr/Type> ;
+  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Bug> ;
+  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Fire> ;
+  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Flying> ;
+  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Poison> ;
+  <http://www.polytech.fr/name> "Grass" .
+
+<http://www.polytech.fr/Ground> a <http://www.polytech.fr/Type> ;
+  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Grass> ;
+  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Water> ;
+  <http://www.polytech.fr/name> "Ground" .
+
+<http://www.polytech.fr/Ivysaur> a <http://www.polytech.fr/Pokemon> ;
+  <http://www.polytech.fr/baseExperience> 142 ;
+  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Male> ;
+  <http://www.polytech.fr/hasNextEvolution> <http://www.polytech.fr/Venusaur> ;
+  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Grass> ;
+  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Poison> ;
+  <http://www.polytech.fr/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Ivysaur> ;
+  <http://www.polytech.fr/isWild> false ;
+  <http://www.polytech.fr/name> "ivysaur" ;
+  <http://www.polytech.fr/nationalPokedexNumber> 2 .
+
+<http://www.polytech.fr/Jenny> a <http://www.polytech.fr/Trainer> ;
+  <http://www.polytech.fr/age> 32 ;
+  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Female> .
+
+<http://www.polytech.fr/Mathieu> a <http://www.polytech.fr/Trainer> ;
+  <http://www.polytech.fr/age> 22 ;
+  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Male> ;
+  <http://www.polytech.fr/hasPokemon> <http://www.polytech.fr/Charmander> .
+
+<http://www.polytech.fr/Meowth> a <http://www.polytech.fr/Pokemon> ;
+  <http://www.polytech.fr/baseExperience> 58 ;
+  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Male> ;
+  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Normal> ;
+  <http://www.polytech.fr/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Meowth> ;
+  <http://www.polytech.fr/name> "meowth" ;
+  <http://www.polytech.fr/nationalPokedexNumber> 52 .
+
+<http://www.polytech.fr/Normal> a <http://www.polytech.fr/Type> ;
+  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Fight> ;
+  <http://www.polytech.fr/name> "Normal" .
+
+<http://www.polytech.fr/Ondine> a <http://www.polytech.fr/Trainer> ;
+  <http://www.polytech.fr/age> 25 ;
+  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Female> .
+
+<http://www.polytech.fr/Pikachu> a <http://www.polytech.fr/Pokemon> ;
+  <http://www.polytech.fr/baseExperience> 112 ;
+  <http://www.polytech.fr/hasEnemy> <http://www.polytech.fr/Miaoous> ;
+  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Female> ;
+  <http://www.polytech.fr/hasNextEvolution> <http://www.polytech.fr/Raichu> ;
+  <http://www.polytech.fr/hasTrainer> <http://www.polytech.fr/Florian> ;
+  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Electric> ;
+  <http://www.polytech.fr/isCaptured> true ;
+  <http://www.polytech.fr/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Pikachu> ;
+  <http://www.polytech.fr/name> "pikachu" ;
+  <http://www.polytech.fr/nationalPokedexNumber> 25 .
+
+<http://www.polytech.fr/Poison> a <http://www.polytech.fr/Type> ;
+  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Ground> ;
+  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Psychic> ;
+  <http://www.polytech.fr/name> "Poison" .
+
+<http://www.polytech.fr/Psychic> a <http://www.polytech.fr/Type> ;
+  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Bug> ;
+  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Dragon> ;
+  <http://www.polytech.fr/name> "Psychic" .
+
+<http://www.polytech.fr/Raichu> a <http://www.polytech.fr/Pokemon> ;
+  <http://www.polytech.fr/baseExperience> 218 ;
+  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Female> ;
+  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Electric> ;
+  <http://www.polytech.fr/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Raichu> ;
+  <http://www.polytech.fr/isWild> false ;
+  <http://www.polytech.fr/name> "raichu" ;
+  <http://www.polytech.fr/nationalPokedexNumber> 26 .
+
+<http://www.polytech.fr/Rock> a <http://www.polytech.fr/Type> ;
+  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Water> ;
+  <http://www.polytech.fr/name> "Rock" .
+
+<http://www.polytech.fr/Sacha> a <http://www.polytech.fr/Trainer> ;
+  <http://www.polytech.fr/age> 21 ;
+  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Male> ;
+  <http://www.polytech.fr/hasPokemon> <http://www.polytech.fr/Miaoous> .
+
+<http://www.polytech.fr/Squirtle> a <http://www.polytech.fr/Pokemon> ;
+  <http://www.polytech.fr/baseExperience> 63 ;
+  <http://www.polytech.fr/hasEnemy> <http://www.polytech.fr/Wobbuffet> ;
+  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Male> ;
+  <http://www.polytech.fr/hasNextEvolution> <http://www.polytech.fr/Wartortle> ;
+  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Water> ;
+  <http://www.polytech.fr/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Squirtle> ;
+  <http://www.polytech.fr/isWild> false ;
+  <http://www.polytech.fr/name> "squirtle" ;
+  <http://www.polytech.fr/nationalPokedexNumber> 7 .
+
+<http://www.polytech.fr/Venusaur> a <http://www.polytech.fr/Pokemon> ;
+  <http://www.polytech.fr/baseExperience> 236 ;
+  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Male> ;
+  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Grass> ;
+  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Poison> ;
+  <http://www.polytech.fr/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Venusaur> ;
+  <http://www.polytech.fr/isWild> false ;
+  <http://www.polytech.fr/name> "venusaur" ;
+  <http://www.polytech.fr/nationalPokedexNumber> 3 .
+
+<http://www.polytech.fr/Wartortle> a <http://www.polytech.fr/Pokemon> ;
+  <http://www.polytech.fr/baseExperience> 142 ;
+  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Male> ;
+  <http://www.polytech.fr/hasNextEvolution> <http://www.polytech.fr/Blastoise> ;
+  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Water> ;
+  <http://www.polytech.fr/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Wartortle> ;
+  <http://www.polytech.fr/isWild> false ;
+  <http://www.polytech.fr/name> "wartortle" ;
+  <http://www.polytech.fr/nationalPokedexNumber> 8 .
+
+<http://www.polytech.fr/Water> a <http://www.polytech.fr/Type> ;
+  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Electric> ;
+  <http://www.polytech.fr/hasWeakness> <http://www.polytech.fr/Grass> ;
+  <http://www.polytech.fr/name> "Water" .
+
+<http://www.polytech.fr/Weezing> a <http://www.polytech.fr/Pokemon> ;
+  <http://www.polytech.fr/baseExperience> 172 ;
+  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Male> ;
+  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Poison> ;
+  <http://www.polytech.fr/isCaptured> true ;
+  <http://www.polytech.fr/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Weezing> ;
+  <http://www.polytech.fr/name> "weezing" ;
+  <http://www.polytech.fr/nationalPokedexNumber> 110 .
+
+<http://www.polytech.fr/Wobbuffet> a <http://www.polytech.fr/Pokemon> ;
+  <http://www.polytech.fr/baseExperience> 142 ;
+  <http://www.polytech.fr/hasGender> <http://www.polytech.fr/Male> ;
+  <http://www.polytech.fr/hasTrainer> <http://www.polytech.fr/Ondine> ;
+  <http://www.polytech.fr/hasType> <http://www.polytech.fr/Psychic> ;
+  <http://www.polytech.fr/isCaptured> true ;
+  <http://www.polytech.fr/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Wobbuffet> ;
+  <http://www.polytech.fr/name> "wobbuffet" ;
+  <http://www.polytech.fr/nationalPokedexNumber> 202 .
+
+<http://www.polytech.fr/age> a rdf:Property .
+
+<http://www.polytech.fr/baseExperience> a rdf:Property .
+
+<http://www.polytech.fr/hasEnemy> a rdf:Property .
+
+<http://www.polytech.fr/hasGender> a rdf:Property .
+
+<http://www.polytech.fr/hasNextEvolution> a rdf:Property .
+
+<http://www.polytech.fr/hasPokemon> a rdf:Property .
+
+<http://www.polytech.fr/hasTrainer> a rdf:Property .
+
+<http://www.polytech.fr/hasType> a rdf:Property .
+
+<http://www.polytech.fr/hasWeakness> a rdf:Property .
+
+<http://www.polytech.fr/isCaptured> a rdf:Property .
+
+<http://www.polytech.fr/isPrimaryTopicOf> a rdf:Property .
+
+<http://www.polytech.fr/isWild> a rdf:Property .
+
+<http://www.polytech.fr/name> a rdf:Property .
+
+<http://www.polytech.fr/nationalPokedexNumber> a rdf:Property .
+
+rdf:type a rdf:Property .

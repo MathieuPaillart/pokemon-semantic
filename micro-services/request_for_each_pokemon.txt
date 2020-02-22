@@ -1,0 +1,19 @@
+prefix schema: <http://schema.org/>.
+prefix pok: <http://www.polytech.fr/>.
+INSERT {
+	?pokemon a pok:Pokemon;
+	pok:nationalPokedexNumber ?nationalPokedexNumber;
+	pok:baseExperience ?baseExperience.
+}
+WHERE{
+	?pokemon a pok:Pokemon
+	?pokemon pok:name ?name
+
+	bind (concat("http://localhost/sparql-ms/pokemontcg/findCards/?keyword=", ?name)  as ?pokemontcg)
+	SERVICE ?pokemontcg
+	{	?pokedexNumber schema:nationalPokedexNumber ?nationalPokedexNumber.}
+
+	bind (concat("http://localhost/sparql-ms/pokeapi/findPokemon/?keyword=", ?name)  as ?pokeapi)
+	SERVICE ?pokeapi
+	{	?PokeExp pok:baseExperience ?baseExperience .}
+}

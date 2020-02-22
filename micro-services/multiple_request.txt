@@ -1,0 +1,24 @@
+prefix schema: <http://schema.org/>.
+prefix pok: <http://www.polytech.fr/>.
+CONSTRUCT {
+	?pokemon a pok:Pokemon;
+	pok:name ?name;
+	pok:baseExperience ?baseExperience;
+	pok:nationalPokedexNumber ?nationalPokedexNumber;
+            foaf:isPrimaryTopicOf ?isPrimaryTopicOf.
+}
+WHERE{
+	SERVICE <http://localhost/sparql-ms/pokeapi/findPokemon/?keyword=charizard>
+
+{	?PokeExp schema:baseExperience ?baseExperience .}
+
+	SERVICE <http://localhost/sparql-ms/pokemontcg/findCards/?keyword=charizard>
+{	?pokedexNumber schema:nationalPokedexNumber ?nationalPokedexNumber. ?pokemon schema:name ?name.}
+
+BIND(IRI(CONCAT("http://dbpedia.org/resource/", ?name)) as ?name_url)
+  service <http://dbpedia.org/sparql/> {
+     select ?isPrimaryTopicOf ?name_url where {
+       ?name_url foaf:isPrimaryTopicOf ?isPrimaryTopicOf
+     }
+}
+}

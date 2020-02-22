@@ -73,7 +73,7 @@
 <Mathieu> a <Trainer>;
 <hasGender> <Male>;
 <age> "22"^^xsd:integer;
-<hasPokemon> <Salamèche>.
+<hasPokemon> <Charmander>.
 
 <Florian> a <Trainer>;
 <hasGender> <Male>;
@@ -96,6 +96,7 @@
 
 
 <Pikachu> a <Pokemon>;
+<name> "pikachu"^^xsd:string;
 <hasGender> <Female>;
 <hasNextEvolution> <Raichu>;
 <hasType> <Electric>;
@@ -104,64 +105,74 @@
 <hasEnemy> <Miaoous>.
 
 <Raichu> a <Pokemon>;
+<name> "raichu"^^xsd:string;
 <hasGender> <Female>;
 <isWild> "false"^^xsd:boolean;
 <hasType> <Electric>.
 
-<Carapuce> a <Pokemon>;
+<Squirtle> a <Pokemon>;
+<name> "squirtle"^^xsd:string;
 <hasGender> <Male>;
-<hasNextEvolution> <Carabaffe>;
+<hasNextEvolution> <Wartortle>;
 <hasType> <Water>;
 <isWild> "false"^^xsd:boolean;
-<hasEnemy> <Qulbutoké>.
+<hasEnemy> <Wobbuffet>.
 
-<Carabaffe> a <Pokemon>;
+<Wartortle> a <Pokemon>;
+<name> "wartortle"^^xsd:string;
 <hasGender> <Male>;
-<hasNextEvolution> <Tortank>;
+<hasNextEvolution> <Blastoise>;
 <isWild> "false"^^xsd:boolean;
 <hasType> <Water>.
 
-<Tortank> a <Pokemon>;
+<Blastoise> a <Pokemon>;
+<name> "blastoise"^^xsd:string;
 <hasGender> <Male>;
 <isWild> "false"^^xsd:boolean;
 <hasType> <Water>.
 
 
-<Bulbizarre> a <Pokemon>;
+<Bulbasaur> a <Pokemon>;
+<name> "bulbasaur"^^xsd:string;
 <hasGender> <Male>;
 <hasType> <Grass>;
 <hasType> <Poison>;
 <isWild> "false"^^xsd:boolean;
-<hasNextEvolution> <Herbizarre>;
-<hasEnemy> <Smogogo>.
+<hasNextEvolution> <Ivysaur>;
+<hasEnemy> <Weezing>.
 
-<Herbizarre> a <Pokemon>;
+<Ivysaur> a <Pokemon>;
+<name> "ivysaur"^^xsd:string;
 <hasGender> <Male>;
 <hasType> <Grass>;
 <hasType> <Poison>;
 <isWild> "false"^^xsd:boolean;
-<hasNextEvolution> <Florizarre>.
+<hasNextEvolution> <Venusaur>.
 
-<Florizarre> a <Pokemon>;
+<Venusaur> a <Pokemon>;
+<name> "venusaur"^^xsd:string;
 <hasGender> <Male>;
 <isWild> "false"^^xsd:boolean;
 <hasType> <Grass>;
 <hasType> <Poison>.
 
-<Salamèche> a <Pokemon>;
+<Charmander> a <Pokemon>;
+<name> "charmander"^^xsd:string;
 <hasGender> <Female>;
 <isWild> "false"^^xsd:boolean;
-<hasNextEvolution> <Reptincel>;
+<hasNextEvolution> <Charmeleon>;
 <hasType> <Fire>;
-<hasEnemy> <Smogogo>.
+<hasEnemy> <Weezing>.
 
-<Reptincel> a <Pokemon>;
+<Charmeleon> a <Pokemon>;
+<name> "charmeleon"^^xsd:string;
 <hasType> <Fire>;
 <hasGender> <Female>;
 <isWild> "false"^^xsd:boolean;
-<hasNextEvolution> <Dracofeu>.
+<hasNextEvolution> <Charizard>.
 
-<Dracofeu> a <Pokemon>;
+<Charizard> a <Pokemon>;
+<name> "charizard"^^xsd:string;
 <hasType> <Fire>;
 <hasType> <Flying>;
 <hasGender> <Female>;
@@ -169,16 +180,19 @@
 <hasTrainer> <Jenny>.
 
 
-<Miaouss> a <Pokemon>;
+<Meowth> a <Pokemon>;
+<name> "meowth"^^xsd:string;
 <hasGender> <Male>;
 <hasType> <Normal>.
 
-<Smogogo> a <Pokemon>;
+<Weezing> a <Pokemon>;
+<name> "weezing"^^xsd:string;
 <hasGender> <Male>;
 <isCaptured> "true"^^xsd:boolean;
 <hasType> <Poison>.
 
-<Qulbutoké> a <Pokemon>;
+<Wobbuffet> a <Pokemon>;
+<name> "wobbuffet"^^xsd:string;
 <hasGender> <Male>;
 <isCaptured> "true"^^xsd:boolean;
 <hasType> <Psychic>;
