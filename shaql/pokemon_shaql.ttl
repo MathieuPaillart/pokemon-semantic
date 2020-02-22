@@ -1,0 +1,30 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> . 
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.polytech.fr/pokemon#> .
+
+<TypeValidation> a sh:NodeShape ;
+    sh:targetClass <Pokemon> ; 
+    sh:property [
+        sh:path <hasType> ; 
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 3 ;
+        sh:qualifiedValueShapesDisjoint true;
+        sh:qualifiedValueShape rdfs:Literal ; 
+    ] .
+
+<WeaknessesValidation> a sh:NodeShape ;
+    sh:targetClass <Pokemon> ; 
+    sh:property [
+        sh:path <hasWeakness> ; 
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedValueShapesDisjoint true;
+        sh:qualifiedValueShape <Type>; 
+    ] .
+
+<AgeValidation> a sh:NodeShape ;
+    sh:targetClass <Person> ; 
+    sh:property [
+        sh:path <age> ; 
+        sh:minCount 1 ;
+        sh:maxCount 130 ;
+    ] .

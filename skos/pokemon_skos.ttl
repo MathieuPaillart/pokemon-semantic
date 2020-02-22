@@ -21,31 +21,42 @@
 <Pokemon>
     a skos:Concept ;
     skos:inScheme <PokemonTheme> ;
-    skos:prefLabel "monster"@en ;
-    skos:example "pikachu est un pokémon"@fr ;
+    skos:prefLabel "pokemon"@en ;
+    skos:hiddenLabel "pokémon"@fr ;
+    skos:example "Pikachu is a pokemon"@en ;
     skos:inScheme <PokemonTheme> .
 
 <Male>
     a skos:Concept ;
+    skos:prefLabel "male"@en ;
     skos:related <Female> .
 
 <Female>    
-    a skos:Concept ;
+    skos:prefLabel "female"@en ;
+    a skos:Concept .
 
-<Person> 
+<Person>
+    skos:prefLabel "person"@en ;
+    skos:broader <Animal> ;
     a skos:Concept ;
 
 <CapturedPokemon> 
     a skos:Concept ;
+    skos:prefLabel "capturedPokemon"@en ;
     skos:inScheme <PokemonTheme> .
 
 <WildPokemon>
     a skos:Concept ;
+    skos:prefLabel "wildPokemon"@en ;
     skos:inScheme <PokemonTheme> .
 
 <Trainer> 
     a skos:Concept ;
+    skos:prefLabel "trainer"@en ;
+    skos:broader <Person> ;
     skos:inScheme <PokemonTheme> .
 
 <Type>
     a skos:Concept ;
+    skos:prefLabel "type"@en ;
+    skos:inScheme <PokemonTheme> .
