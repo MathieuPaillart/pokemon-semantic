@@ -79,7 +79,7 @@
 <Sacha> a <Person> ;
   <age> 21 ;
   <hasGender> <Male> ;
-  <hasPokemon> <Miaoous> .
+  <hasPokemon> <Meowth> .
   
 <Jenny> a <Trainer> ;
   <age> 32 ;
@@ -88,7 +88,7 @@
 <Mathieu> a <Trainer> ;
   <age> 22 ;
   <hasGender> <Male> ;
-  <hasPokemon> <Salamèche> .
+  <hasPokemon> <Charizard> .
   
 <Florian> a <Trainer> ;
   <age> 23 ;
@@ -180,7 +180,7 @@
   <hasMove> <Facade> ;
   <hasMove> <Focus-punch> ;
   <hasMove> <Secret-power> ;
-  <hasNextEvolution> <Reptincel> ;
+  <hasNextEvolution> <Charmeleon> ;
   <hasType> <Fire> ;
   <height> 6 ;
   <hp> "60"^^xsd:string;
@@ -198,7 +198,7 @@
   <hasGender> <Female> ;
   <hasMove> <Flame-burst> ;
   <hasMove> <Flame-charge> ;
-  <hasNextEvolution> <Dracofeu> ;
+  <hasNextEvolution> <Charizard> ;
   <hasType> <Fire> ;
   <height> 11 ;
   <hp> "70"^^xsd:string;
