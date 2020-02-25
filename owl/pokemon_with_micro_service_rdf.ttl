@@ -614,6 +614,13 @@
   <pp> 5 ;
   <moveType> <Water> .
 
+<Rock-tomb> a <Move>;
+  <accuracy> 95;
+  <effect>"Inflicts regular damage. Has a $effect_chance% chance to lower the target's Speed by one stage."^^xsd:string;
+  <name> "rock-tomb"^^xsd:string;
+  <power> 60;
+  <pp> 15;
+  <moveType> <Rock>.
 
 ###Ability
 
