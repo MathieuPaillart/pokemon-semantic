@@ -11,7 +11,7 @@
 ######################   CLASS   ############################
 
 <Region>
-  a owl:Class.
+  a owl:Class .
 
 <Animal>
   a owl:Class ;
@@ -19,12 +19,12 @@
   rdfs:comment "a living organism characterized by voluntary movement."@en, "être vivant doué de sensibilite de mobilité."@fr .
 
 <Monster> 
-  a owl:Class;
+  a owl:Class ;
   rdfs:subClassOf <Animal>;
   rdfs:label "monsters"@en, "monstres"@fr ;
   rdfs:comment "A monster is often a type of grotesque creature, whose appearance frightens and whose powers of destruction threaten the human world's social or moral order."@en, "est un individu ou une créature dont l'apparence, voire le comportement, surprend par son écart avec les normes d'une société."@fr .
 <Pokemon>
-  a owl:Class;
+  a owl:Class ;
   rdfs:subClassOf <Monster>.
 
 <Male>
@@ -33,24 +33,25 @@
   owl:disjointWith <Female> ;
   rdfs:label "male"@en, "mâle"@fr.
 <Female>
-  a owl:Class;
+  a owl:Class ;
   rdfs:subClassOf <Animal>;
   rdfs:label "female"@en, "femelle"@fr.
 
 <Person> 
-  a owl:Class;
+  a owl:Class ;
   rdfs:subClassOf <Animal>.
 
 <CapturedPokemon> 
- a owl:Class;
+ a owl:Class ;
  rdfs:subClassOf <Pokemon>;
  owl:equivalentClass [a owl:Restriction; owl:onProperty <hasTrainer> ;owl:someValuesFrom <Trainer>].
 
 <WildPokemon>
-  a owl:Class;
+  a owl:Class ;
   rdfs:subClassOf <Pokemon>;
   owl:equivalentClass [a owl:Restriction; owl:onProperty <isWild>; owl:hasValue "true"^^xsd:boolean];
   owl:disjointWith <CapturedPokemon>.
+  
 <Trainer> 
   a owl:Class;
 ## Une personne est un trainer ssi elle possède un pokemon

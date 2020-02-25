@@ -32,7 +32,7 @@
   <name> "Psychic"^^xsd:string.
 
 <Normal> a <Type> ;
-  <hasWeakness> <Fight> ;
+  <hasWeakness> <Fighting> ;
   <name> "Normal"^^xsd:string.
   
   <Ground> a <Type> ;
@@ -57,10 +57,10 @@
   <name> "Electric"^^xsd:string.
   
  
-<Fight> a <Type> ;
+<Fighting> a <Type> ;
   <hasWeakness> <Flying> ;
   <hasWeakness> <Psychic> ;
-  <name> "Fight"^^xsd:string.
+  <name> "Fighting"^^xsd:string.
 
 <Fire> a <Type> ;
   <hasWeakness> <Ground> ;
@@ -646,3 +646,6 @@
 
 <Levitate> a <Ability> ;
   <name> "levitate"^^xsd:string.
+
+<Multiscale> a <Ability> ;
+  <name> "multiscale"^^xsd:string.
