@@ -1,0 +1,15 @@
+prefix pok: <http://www.polytech.fr/>.
+CONSTRUCT {
+[]
+pok:nationalPokedexNumber ?nationalPokedexNumber;
+pok:name ?name;
+pok:hp ?hp;
+pok:imageUrl ?imageUrl.
+}
+WHERE {
+?pokemon
+api:nationalPokedexNumber ?nationalPokedexNumber;
+api:name ?name;
+api:hp ?hp;
+api:imageUrl ?imageUrl.
+}

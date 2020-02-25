@@ -1,0 +1,21 @@
+prefix pok: <http://www.polytech.fr/>.
+CONSTRUCT {
+[]
+pok:baseExperience ?baseExperience;
+pok:name ?name;
+pok:weight ?weight;
+pok:height ?height;
+pok:movename ?movename;
+pok:type ?typename;
+pok:abilityname ?abilityname.
+}
+WHERE {
+?pokemon
+api:base_experience ?baseExperience;
+api:name ?name;
+api:weight ?weight;
+api:height ?height;
+api:abilities [api:ability [api:name ?abilityname] ];
+api:moves [api:move [api:name ?movename]];
+api:types [api:type [api:name ?typename]].
+}
