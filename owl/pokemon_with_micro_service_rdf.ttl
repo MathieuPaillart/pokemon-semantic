@@ -7,71 +7,71 @@
 ###Type 
 
 <Bug> a <Type> ;
-  <hasWeakness> <Fire> ;
-  <hasWeakness> <Flying> ;
-  <hasWeakness> <Rock> ;
+  <isWeaker> <Fire> ;
+  <isWeaker> <Flying> ;
+  <isWeaker> <Rock> ;
   <name> "Bug"^^xsd:string.
   
 <Rock> a <Type> ;
-  <hasWeakness> <Water> ;
+  <isWeaker> <Water> ;
   <name> "Rock"^^xsd:string.
 
 <Water> a <Type> ;
-  <hasWeakness> <Electric> ;
-  <hasWeakness> <Grass> ;
+  <isWeaker> <Electric> ;
+  <isWeaker> <Grass> ;
   <name> "Water"^^xsd:string.
 
 <Poison> a <Type> ;
-  <hasWeakness> <Ground> ;
-  <hasWeakness> <Psychic> ;
+  <isWeaker> <Ground> ;
+  <isWeaker> <Psychic> ;
   <name> "Poison"^^xsd:string.
 
 <Psychic> a <Type> ;
-  <hasWeakness> <Bug> ;
-  <hasWeakness> <Dragon> ;
+  <isWeaker> <Bug> ;
+  <isWeaker> <Dragon> ;
   <name> "Psychic"^^xsd:string.
 
 <Normal> a <Type> ;
-  <hasWeakness> <Fight> ;
+  <isWeaker> <Fight> ;
   <name> "Normal"^^xsd:string.
   
   <Ground> a <Type> ;
-  <hasWeakness> <Grass> ;
-  <hasWeakness> <Water> ;
+  <isWeaker> <Grass> ;
+  <isWeaker> <Water> ;
   <name> "Ground"^^xsd:string.
 
 <Grass> a <Type> ;
-  <hasWeakness> <Bug> ;
-  <hasWeakness> <Fire> ;
-  <hasWeakness> <Flying> ;
-  <hasWeakness> <Poison> ;
+  <isWeaker> <Bug> ;
+  <isWeaker> <Fire> ;
+  <isWeaker> <Flying> ;
+  <isWeaker> <Poison> ;
   <name> "Grass"^^xsd:string.
   
 <Dragon> a <Type> ;
-  <hasWeakness> <Dragon> ;
+  <isWeaker> <Dragon> ;
   <name> "Dragon"^^xsd:string.
 
 
 <Electric> a <Type> ;
-  <hasWeakness> <Ground> ;
+  <isWeaker> <Ground> ;
   <name> "Electric"^^xsd:string.
   
  
 <Fight> a <Type> ;
-  <hasWeakness> <Flying> ;
-  <hasWeakness> <Psychic> ;
+  <isWeaker> <Flying> ;
+  <isWeaker> <Psychic> ;
   <name> "Fight"^^xsd:string.
 
 <Fire> a <Type> ;
-  <hasWeakness> <Ground> ;
-  <hasWeakness> <Rock> ;
-  <hasWeakness> <Water> ;
+  <isWeaker> <Ground> ;
+  <isWeaker> <Rock> ;
+  <isWeaker> <Water> ;
   <name> "Fire"^^xsd:string.
   
   
 <Flying> a <Type> ;
-  <hasWeakness> <Electric> ;
-  <hasWeakness> <Rock> ;
+  <isWeaker> <Electric> ;
+  <isWeaker> <Rock> ;
   <name> "Flying"^^xsd:string.
 
 ###Trainer
@@ -110,7 +110,7 @@
   <hasType> <Normal> ;
   <height> 4 ;
   <hp> "60"^^xsd:string;
-  <imageLink> "https://images.pokemontcg.io/xy11/88.png"^^xsd:string;
+  <imageLink> <https://images.pokemontcg.io/xy11/88.png>;
   <isCaptured> true ;
   <name> "meowth"^^xsd:string;
   <nationalPokedexNumber> 52 ;
@@ -127,7 +127,7 @@
   <hasType> <Water> ;
   <height> 16 ;
   <hp> "180"^^xsd:string;
-  <imageLink> "https://images.pokemontcg.io/xyp/XY122.png"^^xsd:string;
+  <imageLink> <https://images.pokemontcg.io/xyp/XY122.png>;
   <isWild> true ;
   <name> "blastoise"^^xsd:string;
   <nationalPokedexNumber> 9 ;
@@ -146,7 +146,7 @@
   <hasType> <Poison> ;
   <height> 7 ;
   <hp> "50"^^xsd:string;
-  <imageLink> "https://images.pokemontcg.io/ex6/55.png"^^xsd:string;
+  <imageLink> <https://images.pokemontcg.io/ex6/55.png>;
   <isWild> true ;
   <name> "bulbasaur"^^xsd:string;
   <nationalPokedexNumber> 1 ;
@@ -164,7 +164,7 @@
   <hasType> <Flying> ;
   <height> 17 ;
   <hp> "120"^^xsd:string;
-  <imageLink> "https://images.pokemontcg.io/ex3/100.png"^^xsd:string;
+  <imageLink> <https://images.pokemontcg.io/ex3/100.png>;
   <isCaptured> true ;
   <name> "charizard"^^xsd:string;
   <nationalPokedexNumber> 6 ;
@@ -184,7 +184,7 @@
   <hasType> <Fire> ;
   <height> 6 ;
   <hp> "60"^^xsd:string;
-  <imageLink> "https://images.pokemontcg.io/det1/4.png"^^xsd:string;
+  <imageLink> <https://images.pokemontcg.io/det1/4.png>;
   <isCaptured> true ;
   <isWild> false ;
   <name> "charmander"^^xsd:string;
@@ -202,7 +202,7 @@
   <hasType> <Fire> ;
   <height> 11 ;
   <hp> "70"^^xsd:string;
-  <imageLink> "https://images.pokemontcg.io/ex3/99.png"^^xsd:string;
+  <imageLink> <https://images.pokemontcg.io/ex3/99.png>;
   <isWild> true ;
   <name> "charmeleon"^^xsd:string;
   <nationalPokedexNumber> 5 ;
@@ -219,7 +219,7 @@
   <hasType> <Poison> ;
   <height> 10 ;
   <hp> "80"^^xsd:string;
-  <imageLink> "https://images.pokemontcg.io/ex6/35.png"^^xsd:string;
+  <imageLink> <https://images.pokemontcg.io/ex6/35.png>;
   <isWild> true ;
   <name> "ivysaur"^^xsd:string;
   <nationalPokedexNumber> 2 ;
@@ -241,7 +241,7 @@
   <hasType> <Water> ;
   <height> 5 ;
   <hp> "60"^^xsd:string;
-  <imageLink> "https://images.pokemontcg.io/sm10/33.png"^^xsd:string;
+  <imageLink> <https://images.pokemontcg.io/sm10/33.png>;
   <isWild> true ;
   <name> "squirtle"^^xsd:string;
   <nationalPokedexNumber> 7 ;
@@ -262,7 +262,7 @@
   <hasType> <Electric> ;
   <height> 4 ;
   <hp> "130"^^xsd:string;
-  <imageLink> "https://images.pokemontcg.io/xyp/XY174.png"^^xsd:string;
+  <imageLink> <https://images.pokemontcg.io/xyp/XY174.png>;
   <isCaptured> true ;
   <name> "pikachu"^^xsd:string;
   <nationalPokedexNumber> 25 ;
@@ -281,7 +281,7 @@
   <hasType> <Electric> ;
   <height> 8 ;
   <hp> "100"^^xsd:string;
-  <imageLink> "https://images.pokemontcg.io/hgss3/83.png"^^xsd:string;
+  <imageLink> <https://images.pokemontcg.io/hgss3/83.png>;
   <isWild> true ;
   <name> "raichu"^^xsd:string;
   <nationalPokedexNumber> 26 ;
@@ -298,7 +298,7 @@
   <hasType> <Poison> ;
   <height> 20 ;
   <hp> "140"^^xsd:string;
-  <imageLink> "https://images.pokemontcg.io/bw5/3.png"^^xsd:string;
+  <imageLink> <https://images.pokemontcg.io/bw5/3.png>;
   <isWild> true ;
   <name> "venusaur"^^xsd:string;
   <nationalPokedexNumber> 3 ;
@@ -314,7 +314,7 @@
   <hasType> <Water> ;
   <height> 10 ;
   <hp> "80"^^xsd:string;
-  <imageLink> "https://images.pokemontcg.io/hgss2/42.png"^^xsd:string;
+  <imageLink> <https://images.pokemontcg.io/hgss2/42.png>;
   <isWild> true ;
   <name> "wartortle"^^xsd:string;
   <nationalPokedexNumber> 8 ;
@@ -330,7 +330,7 @@
   <hasType> <Poison> ;
   <height> 12 ;
   <hp> "70"^^xsd:string;
-  <imageLink> "https://images.pokemontcg.io/ex11/33.png"^^xsd:string ;
+  <imageLink> <https://images.pokemontcg.io/ex11/33.png>;
   <isWild> true ;
   <name> "weezing"^^xsd:string ;
   <nationalPokedexNumber> 110 ;
@@ -351,7 +351,7 @@
   <height> 22 ;
   <hp> "150"^^xsd:string ;
   <name> "dragonite"^^xsd:string;
-  <imageLink> "https://images.pokemontcg.io/dv1/5.png"^^xsd:string ;
+  <imageLink> <https://images.pokemontcg.io/dv1/5.png>;
   <nationalPokedexNumber> 149 ;
   <weight> 2100 ;
   <wikipediaLink> <http://en.wikipedia.org/wiki/Dragonite> .
