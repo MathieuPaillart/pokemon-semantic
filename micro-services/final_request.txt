@@ -1,5 +1,5 @@
 prefix pok: <http://www.polytech.fr/>.
-INSERT {
+CONSTRUCT {
 	?pokemon a pok:Pokemon;
 	pok:nationalPokedexNumber ?nationalPokedexNumber;
 	pok:baseExperience ?baseExperience;
@@ -8,7 +8,7 @@ INSERT {
 	pok:hp ?hp;
 	pok:hasAbility ?abilityURI;
 	pok:hasMove ?moveURI;
-	pok:hasType ?typeURI;
+	pok:hasType ?typeURIPokemon;
 	pok:imageLink ?imageUrl;
 	pok:wikipediaLink ?isPrimaryTopicOf.
 
@@ -43,11 +43,11 @@ bind (uri(concat("http://localhost/sparql-ms/pokemontcg/findCards/?keyword=", ?n
 	pok:height ?height;
             pok:abilityname ?abilityname;
 	pok:movename ?movename;
-	pok:type ?typename.
+	pok:type ?typenamePokemon.
           } LIMIT 4
 }
+BIND(IRI(CONCAT("http://www.polytech.fr/",concat(UCASE(substr(?typenamePokemon, 1,1)),substr(?typenamePokemon,2)))) as ?typeURIPokemon)
 
-BIND(IRI(CONCAT("http://www.polytech.fr/",concat(UCASE(substr(?typename, 1,1)),substr(?typename,2)))) as ?typeURI)
 bind(uri(concat("http://localhost/sparql-ms/pokeapi/findMove/?keyword=",?movename)) as ?pokeapi_findmove)
 SERVICE ?pokeapi_findmove
 	{ ?movepokeapi pok:pp ?pp; pok:power ?power; pok:accuracy ?accuracy; pok:effect ?effect; pok:typename ?typename.}

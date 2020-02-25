@@ -99,14 +99,14 @@ owl:equivalentClass [a owl:Restriction; owl:onProperty <hasPokemon>; owl:someVal
   rdfs:domain <Pokemon>;
   rdfs:range rdfs:Literal.
 
-<hasWeakness>
+<isWeaker>
   a owl:ObjectProperty;
   ##Cardinalité entre 1 et 3 weaknesses
   rdfs:domain <Type>;
   rdfs:range <Type>.
   
-<hasStrength>
-  owl:inverseOf <hasWeakness>;
+<isStronger>
+  owl:inverseOf <isWeaker>;
   rdfs:domain <Type>;
   rdfs:range <Type>.
 <hasEnemy> 

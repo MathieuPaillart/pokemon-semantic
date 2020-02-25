@@ -1,0 +1,19 @@
+prefix pok: <http://www.polytech.fr/>.
+CONSTRUCT {
+[]
+pok:pp ?pp;
+pok:accuracy ?accuracy;
+pok:power ?power;
+pok:effect ?effect;
+pok:typename ?name.
+}
+WHERE {
+?pokemon
+api:pp ?pp;
+api:accuracy ?accuracy;
+api:power ?power;
+api:effect_entries [ api:effect ?effect];
+api:type [api:name ?name].
+}
+
+
