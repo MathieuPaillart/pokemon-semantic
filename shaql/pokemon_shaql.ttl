@@ -2,6 +2,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <http://www.polytech.fr/pokemon#> .
 
+# Capture a request with a pokemon with 1 type
+
 <TypeValidation> a sh:NodeShape ;
     sh:targetClass <Pokemon> ; 
     sh:property [
@@ -13,7 +15,7 @@
     ] .
 
 <WeaknessesValidation> a sh:NodeShape ;
-    sh:targetClass <Pokemon> ; 
+    sh:targetClass <Type> ; 
     sh:property [
         sh:path <hasWeakness> ; 
         sh:qualifiedMinCount 1 ;
