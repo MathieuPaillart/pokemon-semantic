@@ -1,0 +1,24 @@
+prefix h:<http://www.polytech.fr/>.
+select * where {
+  ?pokemon1 h:name "dragonite"
+  ?pokemon1 h:hasType ?type1
+  ?pokemon1 h:hasMove ?move1
+  ?move1 h:moveType ?movetype1
+
+  ?pokemon2 h:name "charizard"
+  ?pokemon2 h:hasType ?type2
+  ?pokemon2 h:hasMove ?move2
+  ?move2 h:moveType ?movetype2
+
+{select (max(?power1) as maxpower1)
+where { ?movetype1 h:isStronger ?movetype1stronger
+             ?movetype1 h:isWeaker ?movetype1weaker
+             ?move1 h:power ?powermove1
+             ?type2 h:isStronger ?test2
+             BIND(IF(?movetype1stronger= ?type2,2*?powermove1,
+	       IF(?movetype1weaker = ?type2, 0.5*?powermove1,
+                      ?powermove1)) as ?power1)
+}
+
+}}
+
