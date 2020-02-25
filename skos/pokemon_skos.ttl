@@ -22,7 +22,8 @@
     a skos:Concept ;
     skos:inScheme <PokemonTheme> ;
     skos:prefLabel "pokemon"@en ;
-    skos:hiddenLabel "pokémon"@fr ;
+    skos:prefLabel "pokémon"@fr ;
+    skos:hiddenLabel "pokemon"@fr ;
     skos:example "Pikachu is a pokemon"@en ;
     skos:inScheme <PokemonTheme> .
 

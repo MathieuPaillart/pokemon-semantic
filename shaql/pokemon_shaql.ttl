@@ -11,7 +11,6 @@
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 3 ;
         sh:qualifiedValueShapesDisjoint true;
-        sh:qualifiedValueShape rdfs:Literal ; 
     ] .
 
 <WeaknessesValidation> a sh:NodeShape ;

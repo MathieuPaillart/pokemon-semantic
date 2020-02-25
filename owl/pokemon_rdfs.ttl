@@ -2,6 +2,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rel: <http://purl.org/vocab/relationship> .
 @base <http://www.polytech.fr/pokemon#> .
 
 
@@ -51,7 +52,7 @@
   rdfs:subClassOf <Pokemon>;
   owl:equivalentClass [a owl:Restriction; owl:onProperty <isWild>; owl:hasValue "true"^^xsd:boolean];
   owl:disjointWith <CapturedPokemon>.
-  
+
 <Trainer> 
   a owl:Class;
 ## Une personne est un trainer ssi elle possède un pokemon
@@ -128,6 +129,12 @@ owl:equivalentClass [a owl:Restriction; owl:onProperty <hasPokemon>; owl:someVal
   a owl:ObjectProperty;
   rdfs:domain <Pokemon>;
   rdfs:range <Move>.
+
+<hasMet>
+  owl:equivalentProperty ;
+  rdfs:domain <Trainer>;
+  rdfs:range <Trainer>.
+  
 ######################   DatatypeProperty   ############################
 
 <isCaptured>
