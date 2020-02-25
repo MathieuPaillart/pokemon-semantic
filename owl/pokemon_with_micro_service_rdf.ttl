@@ -230,7 +230,7 @@
   <baseExperience> 63 ;
   <hasAbility> <Rain-dish> ;
   <hasAbility> <Torrent> ;
-  <hasEnemy> <Wobbuffet> ;
+  <hasEnemy> <Dragonite> ;
   <hasGender> <Male> ;
   <hasMove> <Confusion> ;
   <hasMove> <Dive> ;
@@ -321,19 +321,40 @@
   <weight> 225 ;
   <wikipediaLink> <http://en.wikipedia.org/wiki/Wartortle> .
 
+
 <Weezing> a <Pokemon> ;
+  <baseExperience> 172 ;
+  <hasAbility> <Levitate> ;
   <hasGender> <Male> ;
+  <hasMove> <Smog> ;
   <hasType> <Poison> ;
+  <height> 12 ;
+  <hp> "70"^^xsd:string;
+  <imageLink> "https://images.pokemontcg.io/ex11/33.png"^^xsd:string ;
   <isWild> true ;
-  <name> "weezing"^^xsd:string.
+  <name> "weezing"^^xsd:string ;
+  <nationalPokedexNumber> 110 ;
+  <weight> 95 ;
+  <wikipediaLink> <http://en.wikipedia.org/wiki/Weezing> .
 
-<Wobbuffet> a <Pokemon> ;
+<Dragonite> a <Pokemon> ;
+  <hasAbility> <Multiscale> ;
+  <hasAbility> <Inner-focus> ;
   <hasGender> <Male> ;
+  <baseExperience> 270 ;
+  <hasMove> <Rage> ;
+  <hasMove> <Dragon-breath> ;
+  <hasMove> <Rock-tomb> ;
   <hasTrainer> <Ondine> ;
-  <hasType> <Psychic> ;
-  <isCaptured> true ;
-  <name> "wobbuffet"^^xsd:string.
-
+  <hasType> <Dragon> ;
+  <hasType> <Flying> ;
+  <height> 22 ;
+  <hp> "150"^^xsd:string ;
+  <name> "dragonite"^^xsd:string;
+  <imageLink> "https://images.pokemontcg.io/dv1/5.png"^^xsd:string ;
+  <nationalPokedexNumber> 149 ;
+  <weight> 2100 ;
+  <wikipediaLink> <http://en.wikipedia.org/wiki/Dragonite> .
 
 ###Move
 
@@ -354,6 +375,30 @@
   <moveType> <Fighting> .
   
   
+<Tackle> a <Move> ;
+  <accuracy> 100 ;
+  <effect> "Inflicts regular damage."^^xsd:string;
+  <name> "tackle"^^xsd:string;
+  <power> 40 ;
+  <pp> 35 ;
+  <moveType> <Normal> .
+  
+<Rollout> a <Move> ;
+  <accuracy> 90 ;
+  <effect> "Inflicts regular damage.  User is forced to use this move for five turns.  Power doubles every time this move is used in succession to a maximum of 16x, and resets to normal after the lock-in ends.  If this move misses or becomes unusable, the lock-in ends.If the user has used defense curl since entering the field, this move has double power."^^xsd:string;
+  <name> "rollout"^^xsd:string;
+  <power> 30 ;
+  <pp> 20 ;
+  <moveType> <Rock> .
+
+<Dragon-breath> a <Move> ;
+  <accuracy> 100 ;
+  <effect> "Inflicts regular damage.  Has a $effect_chance% chance to paralyze the target."^^xsd:string;
+  <name> "dragon-breath"^^xsd:string;
+  <power> 60 ;
+  <pp> 20 ;
+  <moveType> <Dragon> .
+
 <Confusion> a <Move> ;
   <accuracy> 100 ;
   <effect> "Inflicts regular damage.  Has a $effect_chance% chance to confuse the target."^^xsd:string;
@@ -428,6 +473,15 @@
   <pp> 20 ;
   <moveType> <Fire> .
   
+  
+<Incinerate> a <Move> ;
+  <accuracy> 100 ;
+  <effect> "Inflicts regular damage.  If the target is holding a berry, it's destroyed and cannot be used in response to this move."^^xsd:string;
+  <name> "incinerate"^^xsd:string;
+  <power> 60 ;
+  <pp> 15 ;
+  <moveType> <Fire> .
+
 <Focus-punch> a <Move> ;
   <accuracy> 100 ;
   <effect> "Inflicts regular damage.  If the user takes damage this turn before hitting, this move will fail.This move cannot be copied by mirror move, nor selected by assist, metronome, or sleep talk."^^xsd:string;
@@ -511,7 +565,8 @@
   <power> 120 ;
   <pp> 10 ;
   <moveType> <Grass> .
-  <Thunder> a <Move> ;
+
+<Thunder> a <Move> ;
   <accuracy> 70 ;
   <effect> "Inflicts regular damage.  Has a $effect_chance% chance to paralyze the target.During rain dance, this move has 100% accuracy.  It also has a (100 - accuracy)% chance to break through the protection of protect and detect.During sunny day, this move has 50% accuracy."^^xsd:string;
   <name> "thunder"^^xsd:string;
@@ -542,8 +597,7 @@
   <power> 90 ;
   <pp> 15 ;
   <moveType> <Electric> .
-  
-  
+
 <Uproar> a <Move> ;
   <accuracy> 100 ;
   <effect> "Inflicts regular damage.  User is forced to use this move for 2–5 turns, selected at random.  All Pokémon on the field wake up, and none can fall to sleep until the lock-in ends.Pokémon cannot use rest during this effect.This move cannot be selected by sleep talk."^^xsd:string;
@@ -551,7 +605,6 @@
   <power> 90 ;
   <pp> 10 ;
   <moveType> <Normal> .
-
 
 <Water-spout> a <Move> ;
   <accuracy> 100 ;
@@ -585,7 +638,11 @@
 <Static> a <Ability> ;
   <name> "static"^^xsd:string.
 
-
 <Torrent> a <Ability> ;
   <name> "torrent"^^xsd:string.
 
+<Inner-focus> a <Ability> ;
+  <name> "inner-focus"^^xsd:string.
+
+<Levitate> a <Ability> ;
+  <name> "levitate"^^xsd:string.

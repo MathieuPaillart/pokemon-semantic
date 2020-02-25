@@ -60,6 +60,11 @@ owl:equivalentClass [a owl:Restriction; owl:onProperty <hasPokemon>; owl:someVal
 <Type>
   a owl:Class.
 
+<Move>
+  a owl:Class.
+<Ability>
+  a owl:Class.
+
 ######################   ObjectProperty   ############################
 <hasEvolution>
   a owl:ObjectProperty, owl:TransitiveProperty, owl:IrreflexiveProperty ;
@@ -108,6 +113,20 @@ owl:equivalentClass [a owl:Restriction; owl:onProperty <hasPokemon>; owl:someVal
   rdfs:domain <Animal>;
   rdfs:range <Animal>.
 
+<moveType>
+ a owl:ObjectProperty;
+ rdfs:domain <Move>;
+ rdfs:range <Type>.
+
+ <hasAbility>
+  a owl:ObjectProperty;
+  rdfs:domain <Pokemon>;
+  rdfs:range <Ability>.
+
+<hasMove>
+  a owl:ObjectProperty;
+  rdfs:domain <Pokemon>;
+  rdfs:range <Move>.
 ######################   DatatypeProperty   ############################
 
 <isCaptured>
@@ -153,3 +172,75 @@ owl:equivalentClass [a owl:Restriction; owl:onProperty <hasPokemon>; owl:someVal
   rdfs:range rdfs:Literal;
   rdfs:label "age"@en, "âge"@fr ;
   rdfs:comment "complete existence duration."@en, "durée complète d'existence."@fr .
+<accuracy>
+  a owl:DatatypeProperty;
+  rdfs:domain <Move>;
+  rdfs:range rdfs:Literal;
+  rdfs:label "accuracy"@en, "précision"@fr;
+  rdfs:comment "accuracy of a move"@en, "précision d'une capacité"@fr.
+<effect>
+  a owl:DatatypeProperty;
+  rdfs:domain <Move>;
+  rdfs:range rdfs:Literal;
+  rdfs:label "effect"@en, "effet"@fr;
+  rdfs:comment "effect of a move, it's his description"@en, "effect d'une capacité, c'est sa description"@fr.
+<power>
+  a owl:DatatypeProperty;
+  rdfs:domain <Move>;
+  rdfs:range rdfs:Literal;
+  rdfs:label "power"@en,"puissance"@fr;
+  rdfs:comment "power of a move"@en,"puissance d'une capacité"@fr.
+<pp>
+  a owl:DatatypeProperty;
+  rdfs:domain <Move>;
+  rdfs:range rdfs:Literal;
+  rdfs:label "pp"@en,"pp"@fr;
+  rdfs:comment "power point"@en,"points de pouvoir"@fr.
+
+<baseExperience>
+  a owl:DatatypeProperty;
+  rdfs:domain <Pokemon>;
+  rdfs:range rdfs:Literal;
+  rdfs:label "base experience"@en, "expérience de base"@fr;
+  rdfs:comment "base experience of a pokemon, it's his minimum xp required to level up"@en, "expérience de base d'un pokemon afin de passer un niveau"@fr.
+
+<hp>
+  a owl:DatatypeProperty;
+  rdfs:domain <Pokemon>;
+  rdfs:range rdfs:Literal;
+  rdfs:label "hp"@en,"pv"@fr;
+  rdfs:comment "health point of a pokemon"@en, "point de vie d'un pokemon".
+
+<weight>
+  a owl:DatatypeProperty;
+  rdfs:domain <Pokemon>;
+  rdfs:range rdfs:Literal;
+  rdfs:label "weight"@en,"poids"@fr;
+  rdfs:comment "weight of a pokemon"@en, "poids d'un pokemon".
+
+<height>
+  a owl:DatatypeProperty;
+  rdfs:domain <Pokemon>;
+  rdfs:range rdfs:Literal;
+  rdfs:label "height"@en,"taille"@fr;
+  rdfs:comment "height of a pokemon"@en, "taille d'un pokemon".
+<nationalPokedexNumber>
+  a owl:DatatypeProperty;
+  rdfs:domain <Pokemon>;
+  rdfs:range rdfs:Literal;
+  rdfs:label "national pokedex number"@en,"numéro national du pokedex"@fr;
+  rdfs:comment "id of a pokemon in a specific version"@en, "identifiant d'un pokemon dans une version spécifique du jeu".
+
+<imageLink>
+  a owl:DatatypeProperty;
+  rdfs:domain <Pokemon>;
+  rdfs:range rdfs:Literal;
+  rdfs:label "image link"@en,"lien d'une image"@fr;
+  rdfs:comment "link of an image representing a pokemon card"@en, "lien d'une image représentant une carte pokemon".
+
+<wikipediaLink>
+  a owl:DatatypeProperty;
+  rdfs:domain <Pokemon>;
+  rdfs:range rdfs:Literal;
+  rdfs:label "wikipedia link"@en,"lien vers wikipedia"@fr;
+  rdfs:comment "description of a pokemon in a wikipedia link"@en, "description d'un pokemon dans un lien wikipedia".

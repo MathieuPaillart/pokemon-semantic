@@ -116,7 +116,7 @@
 <hasNextEvolution> <Wartortle>;
 <hasType> <Water>;
 <isWild> "true"^^xsd:boolean;
-<hasEnemy> <Wobbuffet>.
+<hasEnemy> <Dragonite>.
 
 <Wartortle> a <Pokemon>;
 <name> "wartortle"^^xsd:string;
@@ -193,8 +193,8 @@
 <isWild> "true"^^xsd:boolean;
 <hasType> <Poison>.
 
-<Wobbuffet> a <Pokemon>;
-<name> "wobbuffet"^^xsd:string;
+<Dragonite> a <Pokemon>;
+<name> "dragonite"^^xsd:string;
 <hasGender> <Male>;
 <isCaptured> "true"^^xsd:boolean;
 <hasType> <Psychic>;
