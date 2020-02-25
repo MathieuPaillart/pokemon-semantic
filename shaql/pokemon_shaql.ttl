@@ -23,6 +23,39 @@
         sh:qualifiedValueShape <Type>; 
     ] .
 
+<AccuracyValidation> a sh:NodeShape ; 
+    sh:targetClass <Pokemon> ; 
+    sh:property [
+        sh:path <accuracy> ; 
+        sh:minCount 0 ;
+        sh:maxCount 100 ;
+    ] .
+
+<AbilityValidation> a sh:NodeShape ;
+    sh:targetClass <Ability> ; 
+    sh:property [
+        sh:path <name> ; 
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedValueShape rdfs:Literal .
+    ] .
+
+<PowerValidation> a sh:NodeShape ; 
+    sh:targetClass <Pokemon> ; 
+    sh:property [
+        sh:path <accuracy> ; 
+        sh:minCount 0 ;
+        sh:maxCount 250 ;
+    ] .
+
+<PPValidation> a sh:NodeShape ; 
+    sh:targetClass <Pokemon> ; 
+    sh:property [
+        sh:path <pp> ; 
+        sh:minCount 0 ;
+        sh:maxCount 40 ;
+    ] .
+
+
 <AgeValidation> a sh:NodeShape ;
     sh:targetClass <Person> ; 
     sh:property [
