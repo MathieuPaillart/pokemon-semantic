@@ -1,5 +1,5 @@
 prefix pok: <http://www.polytech.fr/>.
-CONSTRUCT {
+INSERT{
 	?pokemon a pok:Pokemon;
 	pok:nationalPokedexNumber ?nationalPokedexNumber;
 	pok:baseExperience ?baseExperience;
