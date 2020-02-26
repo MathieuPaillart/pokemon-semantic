@@ -11,7 +11,6 @@
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 3 ;
         sh:qualifiedValueShapesDisjoint true;
-        sh:qualifiedValueShape rdfs:Literal ; 
     ] .
 
 <WeaknessesValidation> a sh:NodeShape ;
@@ -19,8 +18,8 @@
     sh:property [
         sh:path <hasWeakness> ; 
         sh:qualifiedMinCount 1 ;
-        sh:qualifiedValueShapesDisjoint true;
-        sh:qualifiedValueShape <Type>; 
+        sh:qualifiedValueShapesDisjoint true ;
+        sh:qualifiedValueShape <Type> ; 
     ] .
 
 <AccuracyValidation> a sh:NodeShape ; 
@@ -31,12 +30,19 @@
         sh:maxCount 100 ;
     ] .
 
+<PokemonNameValidation> a sh:NodeShape ; 
+    sh:targetClass <Pokemon> ;
+    sh:property [
+        sh:path <name> ; 
+        sh:pattern "[a-z]*" ;
+    ] .
+
 <AbilityValidation> a sh:NodeShape ;
     sh:targetClass <Ability> ; 
     sh:property [
         sh:path <name> ; 
         sh:qualifiedMinCount 1 ;
-        sh:qualifiedValueShape rdfs:Literal .
+        sh:qualifiedValueShape rdfs:Literal ;
     ] .
 
 <PowerValidation> a sh:NodeShape ; 
