@@ -78,6 +78,7 @@
 
 <Sacha> a <Person> ;
   <age> 21 ;
+  <hasMet> <Ondine> ;
   <hasGender> <Male> ;
   <hasPokemon> <Meowth> .
   

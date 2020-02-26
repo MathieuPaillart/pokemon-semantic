@@ -2,7 +2,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rel: <http://purl.org/vocab/relationship> .
+@prefix rel: <http://purl.org/vocab/relationship/> .
 @base <http://www.polytech.fr/pokemon#> .
 
 
@@ -24,6 +24,7 @@
   rdfs:subClassOf <Animal>;
   rdfs:label "monsters"@en, "monstres"@fr ;
   rdfs:comment "A monster is often a type of grotesque creature, whose appearance frightens and whose powers of destruction threaten the human world's social or moral order."@en, "est un individu ou une créature dont l'apparence, voire le comportement, surprend par son écart avec les normes d'une société."@fr .
+
 <Pokemon>
   a owl:Class ;
   rdfs:subClassOf <Monster>.
@@ -64,6 +65,7 @@ owl:equivalentClass [a owl:Restriction; owl:onProperty <hasPokemon>; owl:someVal
 
 <Move>
   a owl:Class.
+
 <Ability>
   a owl:Class.
 
@@ -110,8 +112,10 @@ owl:equivalentClass [a owl:Restriction; owl:onProperty <hasPokemon>; owl:someVal
   owl:inverseOf <isWeaker>;
   rdfs:domain <Type>;
   rdfs:range <Type>.
+
 <hasEnemy> 
   a owl:SymmetricProperty;
+  owl:subPropertyOf rel:enemyOf ;
   rdfs:domain <Animal>;
   rdfs:range <Animal>.
 
@@ -131,7 +135,8 @@ owl:equivalentClass [a owl:Restriction; owl:onProperty <hasPokemon>; owl:someVal
   rdfs:range <Move>.
 
 <hasMet>
-  owl:equivalentProperty ;
+  a owl:SymmetricProperty ;
+  owl:subPropertyOf rel:hasMet ;
   rdfs:domain <Trainer>;
   rdfs:range <Trainer>.
   
@@ -153,16 +158,18 @@ owl:equivalentClass [a owl:Restriction; owl:onProperty <hasPokemon>; owl:someVal
   rdfs:range rdfs:Literal;
   rdfs:label "size"@en, "taille"@fr ;
   rdfs:comment "size of the animal"@en, "taille de l'aniaml"@fr .
+
 <weight>
-  a owl:DatatypeProperty;
-  rdfs:domain <Animal>;
-  rdfs:range rdfs:Literal;
+  a owl:DatatypeProperty ; 
+  rdfs:domain <Animal> ;
+  rdfs:range rdfs:Literal ;
   rdfs:label "weight"@en, "poids"@fr ;
   rdfs:comment "wieght of the animal"@en, "poids de l'animal"@fr .
+
 <hasPokedexNumber>
-  a owl:DatatypeProperty;
-  rdfs:domain <Pokemon>;
-  rdfs:range rdfs:Literal.
+  a owl:DatatypeProperty ;
+  rdfs:domain <Pokemon> ;
+  rdfs:range rdfs:Literal .
 
 <hasGender>
  a owl:DatatypeProperty;
@@ -170,7 +177,6 @@ owl:equivalentClass [a owl:Restriction; owl:onProperty <hasPokemon>; owl:someVal
   rdfs:label "name"@en, "nom"@fr ;
   rdfs:comment "nickname of a team"@en, "pseudo de l'équipe"@fr .
 
-# TODO : restrictions only lower case
 <name>
   a owl:FunctionalProperty;
   rdfs:range rdfs:Literal.
