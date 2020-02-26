@@ -7,71 +7,71 @@
 ###Type 
 
 <Bug> a <Type> ;
-  <hasWeakness> <Fire> ;
-  <hasWeakness> <Flying> ;
-  <hasWeakness> <Rock> ;
+  <isWeaker> <Fire> ;
+  <isWeaker> <Flying> ;
+  <isWeaker> <Rock> ;
   <name> "Bug"^^xsd:string.
   
 <Rock> a <Type> ;
-  <hasWeakness> <Water> ;
+  <isWeaker> <Water> ;
   <name> "Rock"^^xsd:string.
 
 <Water> a <Type> ;
-  <hasWeakness> <Electric> ;
-  <hasWeakness> <Grass> ;
+  <isWeaker> <Electric> ;
+  <isWeaker> <Grass> ;
   <name> "Water"^^xsd:string.
 
 <Poison> a <Type> ;
-  <hasWeakness> <Ground> ;
-  <hasWeakness> <Psychic> ;
+  <isWeaker> <Ground> ;
+  <isWeaker> <Psychic> ;
   <name> "Poison"^^xsd:string.
 
 <Psychic> a <Type> ;
-  <hasWeakness> <Bug> ;
-  <hasWeakness> <Dragon> ;
+  <isWeaker> <Bug> ;
+  <isWeaker> <Dragon> ;
   <name> "Psychic"^^xsd:string.
 
 <Normal> a <Type> ;
-  <hasWeakness> <Fighting> ;
+  <isWeaker> <Fighting> ;
   <name> "Normal"^^xsd:string.
   
   <Ground> a <Type> ;
-  <hasWeakness> <Grass> ;
-  <hasWeakness> <Water> ;
+  <isWeaker> <Grass> ;
+  <isWeaker> <Water> ;
   <name> "Ground"^^xsd:string.
 
 <Grass> a <Type> ;
-  <hasWeakness> <Bug> ;
-  <hasWeakness> <Fire> ;
-  <hasWeakness> <Flying> ;
-  <hasWeakness> <Poison> ;
+  <isWeaker> <Bug> ;
+  <isWeaker> <Fire> ;
+  <isWeaker> <Flying> ;
+  <isWeaker> <Poison> ;
   <name> "Grass"^^xsd:string.
   
 <Dragon> a <Type> ;
-  <hasWeakness> <Dragon> ;
+  <isWeaker> <Dragon> ;
   <name> "Dragon"^^xsd:string.
 
 
 <Electric> a <Type> ;
-  <hasWeakness> <Ground> ;
+  <isWeaker> <Ground> ;
   <name> "Electric"^^xsd:string.
   
  
 <Fighting> a <Type> ;
-  <hasWeakness> <Flying> ;
-  <hasWeakness> <Psychic> ;
+  <isWeaker> <Flying> ;
+  <isWeaker> <Psychic> ;
   <name> "Fighting"^^xsd:string.
 
 <Fire> a <Type> ;
-  <hasWeakness> <Ground> ;
-  <hasWeakness> <Rock> ;
-  <hasWeakness> <Water> ;
+  <isWeaker> <Ground> ;
+  <isWeaker> <Rock> ;
+  <isWeaker> <Water> ;
   <name> "Fire"^^xsd:string.
   
   
 <Flying> a <Type> ;
-  <hasWeakness> <Electric> ;
-  <hasWeakness> <Rock> ;
+  <isWeaker> <Electric> ;
+  <isWeaker> <Rock> ;
   <name> "Flying"^^xsd:string.
 
 ###Trainer

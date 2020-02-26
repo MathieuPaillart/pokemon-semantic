@@ -1,5 +1,5 @@
 prefix h:<http://www.polytech.fr/>.
-select * where {
+select distinct ?pokemon1 ?maxpower1 where {
   ?pokemon1 h:name "dragonite"
   ?pokemon1 h:hasType ?type1
   ?pokemon1 h:hasMove ?move1
